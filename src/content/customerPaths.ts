@@ -11,7 +11,13 @@ export type CustomerIndustry =
   | "Manufacturing"
   | "Data centres"
   | "Emergency response"
-  | "Government command centres";
+  | "Government command centres"
+  | "Mining and metals"
+  | "Telecom and network operations"
+  | "Airports and aviation"
+  | "Healthcare command centres"
+  | "Banking and financial services"
+  | "Water and wastewater";
 
 export type CustomerRole =
   | "Operations head"
@@ -20,7 +26,14 @@ export type CustomerRole =
   | "Consultant"
   | "IT or technology head"
   | "Procurement"
-  | "Senior management";
+  | "Senior management"
+  | "MD/CEO"
+  | "Control room operator"
+  | "Safety head"
+  | "Security head"
+  | "Facilities head"
+  | "Project manager"
+  | "System integrator";
 
 export type CustomerPathSelection = {
   industry?: CustomerIndustry;
@@ -47,6 +60,12 @@ export const industries: CustomerIndustry[] = [
   "Data centres",
   "Emergency response",
   "Government command centres",
+  "Mining and metals",
+  "Telecom and network operations",
+  "Airports and aviation",
+  "Healthcare command centres",
+  "Banking and financial services",
+  "Water and wastewater",
 ];
 
 export const roles: CustomerRole[] = [
@@ -57,6 +76,13 @@ export const roles: CustomerRole[] = [
   "IT or technology head",
   "Procurement",
   "Senior management",
+  "MD/CEO",
+  "Control room operator",
+  "Safety head",
+  "Security head",
+  "Facilities head",
+  "Project manager",
+  "System integrator",
 ];
 
 export const customerPathMappings: CustomerPathMapping[] = [
@@ -227,6 +253,114 @@ export const customerPathMappings: CustomerPathMapping[] = [
       "Government references are visible in the source, with exact scope reviewed during project scoping.",
   },
   {
+    id: "Mining and metals",
+    type: "industry",
+    recommendedChapters: ["operator-pressure", "connected-environment", "incident-response", "proven-environments"],
+    recommendedProducts: [
+      "adaptive-sit-stand-console",
+      "environment-intelligence",
+      "supervisor-oversight-system",
+      "intelligent-acoustic-environment",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "operator-pressure":
+        "Frame the room around shift resilience, environmental comfort and reliable escalation for asset-heavy operations.",
+    },
+    neutralRecommendation:
+      "Use transferable heavy-industry control-room principles and review mining-specific references separately.",
+  },
+  {
+    id: "Telecom and network operations",
+    type: "industry",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "intelligent-layers"],
+    recommendedProducts: [
+      "scada-triggered-video-wall",
+      "onehub-ai-desk-hub",
+      "ai-incident-copilot",
+      "supervisor-oversight-system",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "connected-environment":
+        "Lead with network visibility, shared dashboards and integration boundaries that can be confirmed during solution design.",
+    },
+    neutralRecommendation:
+      "Present the room as a network operations environment with integrations confirmed during scoping.",
+  },
+  {
+    id: "Airports and aviation",
+    type: "industry",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "proven-environments"],
+    recommendedProducts: [
+      "scada-triggered-video-wall",
+      "supervisor-oversight-system",
+      "situational-awareness-lighting",
+      "environment-intelligence",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "incident-response":
+        "Discuss coordinated awareness, exception handling and multi-team visibility without implying airport-specific integrations.",
+    },
+    neutralRecommendation:
+      "Use the transportation operations story and confirm aviation-specific workflow integrations separately.",
+  },
+  {
+    id: "Healthcare command centres",
+    type: "industry",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "intelligent-layers"],
+    recommendedProducts: [
+      "scada-triggered-video-wall",
+      "environment-intelligence",
+      "supervisor-oversight-system",
+      "voice-enabled-interaction",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "continuous-awareness":
+        "Keep the discussion around operational coordination and room behaviour; clinical system detail requires confirmation.",
+    },
+    neutralRecommendation:
+      "Present a healthcare operations-centre pathway and confirm clinical or facility-system integrations during scoping.",
+  },
+  {
+    id: "Banking and financial services",
+    type: "industry",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "intelligent-layers"],
+    recommendedProducts: [
+      "scada-triggered-video-wall",
+      "onehub-ai-desk-hub",
+      "supervisor-oversight-system",
+      "intelligent-acoustic-environment",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "intelligent-layers":
+        "Emphasise secure decision support, operational visibility and confirmation-required integration detail.",
+    },
+    neutralRecommendation:
+      "Use the executive operations story and review financial-services-specific compliance needs separately.",
+  },
+  {
+    id: "Water and wastewater",
+    type: "industry",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "proven-environments"],
+    recommendedProducts: [
+      "scada-triggered-video-wall",
+      "environment-intelligence",
+      "situational-awareness-lighting",
+      "supervisor-oversight-system",
+    ],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "connected-environment":
+        "Frame the pathway around utility monitoring, escalation and room integration; site systems are confirmed project by project.",
+    },
+    neutralRecommendation:
+      "Use the utility operations route and confirm water-system integration detail during project scoping.",
+  },
+  {
     id: "Operations head",
     type: "role",
     recommendedChapters: ["operator-pressure", "connected-environment", "incident-response"],
@@ -307,6 +441,83 @@ export const customerPathMappings: CustomerPathMapping[] = [
       "command-advantage": "Keep the close focused on transformation, confidence and the next discovery step.",
     },
     neutralRecommendation: "Focus on strategic confidence, delivery credibility and next action.",
+  },
+  {
+    id: "MD/CEO",
+    type: "role",
+    recommendedChapters: ["world-never-stops", "intelligent-layers", "proven-environments", "command-advantage"],
+    recommendedProducts: ["supervisor-oversight-system", "scada-triggered-video-wall", "environment-intelligence"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "command-advantage": "Keep the close focused on board-level confidence, transformation value and the next decision step.",
+    },
+    neutralRecommendation: "Focus on executive confidence, strategic value and next action.",
+  },
+  {
+    id: "Control room operator",
+    type: "role",
+    recommendedChapters: ["operator-pressure", "human-centred-room", "connected-environment", "incident-response"],
+    recommendedProducts: ["adaptive-sit-stand-console", "intelligent-operator-chair", "personal-environment-bubble"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "operator-pressure": "Prioritise daily usability, comfort, alert clarity and reduced cognitive load.",
+    },
+    neutralRecommendation: "Focus on operator comfort, clarity and shift performance.",
+  },
+  {
+    id: "Safety head",
+    type: "role",
+    recommendedChapters: ["operator-pressure", "incident-response", "connected-environment", "proven-environments"],
+    recommendedProducts: ["ai-incident-copilot", "situational-awareness-lighting", "supervisor-oversight-system"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "incident-response": "Position the room as a clearer response environment; validate SOP and alert integrations during scoping.",
+    },
+    neutralRecommendation: "Focus on incident readiness, visibility and escalation clarity.",
+  },
+  {
+    id: "Security head",
+    type: "role",
+    recommendedChapters: ["continuous-awareness", "connected-environment", "incident-response", "proven-environments"],
+    recommendedProducts: ["scada-triggered-video-wall", "supervisor-oversight-system", "ai-incident-copilot"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "continuous-awareness": "Lead with shared visibility, supervisory awareness and controlled access to critical information.",
+    },
+    neutralRecommendation: "Focus on situational awareness, response coordination and operational control.",
+  },
+  {
+    id: "Facilities head",
+    type: "role",
+    recommendedChapters: ["human-centred-room", "connected-environment", "intelligent-layers", "configure-direction"],
+    recommendedProducts: ["environment-intelligence", "intelligent-acoustic-environment", "circadian-lighting"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "human-centred-room": "Emphasise lighting, acoustics, comfort, serviceability and maintainable room infrastructure.",
+    },
+    neutralRecommendation: "Focus on maintainability, comfort systems and long-life room infrastructure.",
+  },
+  {
+    id: "Project manager",
+    type: "role",
+    recommendedChapters: ["traditional-limits", "connected-environment", "proven-environments", "configure-direction"],
+    recommendedProducts: ["adaptive-sit-stand-console", "scada-triggered-video-wall", "environment-intelligence"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "configure-direction": "Use the close to align scope, dependencies, approvals and next design inputs.",
+    },
+    neutralRecommendation: "Focus on scope clarity, delivery coordination and decision checkpoints.",
+  },
+  {
+    id: "System integrator",
+    type: "role",
+    recommendedChapters: ["connected-environment", "incident-response", "intelligent-layers", "configure-direction"],
+    recommendedProducts: ["onehub-ai-desk-hub", "scada-triggered-video-wall", "voice-enabled-interaction"],
+    surfacedProjects: [],
+    presenterTalkingPoints: {
+      "connected-environment": "Keep integrations explicit as interfaces to be confirmed, tested and documented during delivery.",
+    },
+    neutralRecommendation: "Focus on integration boundaries, interface readiness and technical validation.",
   },
 ];
 

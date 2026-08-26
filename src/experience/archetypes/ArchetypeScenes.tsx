@@ -16,6 +16,12 @@ import {
 
 export { OpeningExperienceScene as CinematicOpeningArchetype };
 
+const missionCriticalBeatPhases: Record<string, string> = {
+  monitor: "AWARENESS",
+  coordinate: "DECISION",
+  respond: "RESPONSE",
+};
+
 export function ChapterTitleArchetype({ chapter }: SceneComponentProps) {
   return (
     <ArchetypeRuntime chapter={chapter} variant="geometry-title">
@@ -59,7 +65,7 @@ export function ImmersiveEnvironmentArchetype({ chapter }: SceneComponentProps) 
                 <div className="pws-mission-critical-beats">
                   {chapter.beats.map((beat, index) => (
                     <button
-                      aria-label={`Focus on ${beat.label}`}
+                      aria-label={`Focus on ${missionCriticalBeatPhases[beat.id] ?? beat.label}: ${beat.label}`}
                       className="pws-mission-critical-beat"
                       key={beat.id}
                       onClick={() => {
@@ -69,7 +75,7 @@ export function ImmersiveEnvironmentArchetype({ chapter }: SceneComponentProps) 
                       type="button"
                     >
                       <span className="pws-mission-critical-beat-index">
-                        {String(index + 1).padStart(2, "0")}
+                        {String(index + 1).padStart(2, "0")} - {missionCriticalBeatPhases[beat.id] ?? beat.label}
                       </span>
                       <strong>{beat.label}</strong>
                       {beat.supportingLabel ? <small>{beat.supportingLabel}</small> : null}

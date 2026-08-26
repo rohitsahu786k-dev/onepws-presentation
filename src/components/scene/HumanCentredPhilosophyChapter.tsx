@@ -8,7 +8,6 @@ import {
   Headphones,
   Info,
   Map,
-  Quote,
   Sun,
   TrendingUp,
   UserRound,
@@ -42,13 +41,13 @@ const principles = [
   {
     id: "people",
     label: "People",
-    detail: "At the centre of every decision.",
+    detail: "Operators at the centre of every decision.",
     Icon: UserRound,
   },
   {
     id: "purpose",
     label: "Purpose",
-    detail: "Every element has a clear role.",
+    detail: "Every element designed around a clear operational need.",
     Icon: Crosshair,
   },
   {
@@ -60,7 +59,7 @@ const principles = [
   {
     id: "partnership",
     label: "Partnership",
-    detail: "People, technology and space working as one.",
+    detail: "People, technology and environment working as one.",
     Icon: UsersRound,
   },
 ];
@@ -70,7 +69,7 @@ const adaptations: Adaptation[] = [
     id: "operator",
     index: "01",
     title: "The Operator",
-    detail: "Support different users, roles and working preferences.",
+    detail: "Accommodate different users, roles and working preferences.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: UserRound,
@@ -79,7 +78,7 @@ const adaptations: Adaptation[] = [
     id: "task",
     index: "02",
     title: "The Task",
-    detail: "Align the workstation and environment with the work being performed.",
+    detail: "Shape the workspace around the work being performed.",
     accent: "#2f65b8",
     soft: "rgb(47 101 184 / 0.11)",
     Icon: BookOpen,
@@ -88,7 +87,7 @@ const adaptations: Adaptation[] = [
     id: "information",
     index: "03",
     title: "The Information",
-    detail: "Place critical content where it can be understood quickly.",
+    detail: "Place critical information where it can be understood quickly.",
     accent: "#118d8a",
     soft: "rgb(17 141 138 / 0.12)",
     Icon: Info,
@@ -97,7 +96,7 @@ const adaptations: Adaptation[] = [
     id: "team",
     index: "04",
     title: "The Team",
-    detail: "Enable smooth transitions from individual focus to coordinated response.",
+    detail: "Support individual focus and coordinated response.",
     accent: "#7b3fc9",
     soft: "rgb(123 63 201 / 0.11)",
     Icon: UsersRound,
@@ -106,7 +105,7 @@ const adaptations: Adaptation[] = [
     id: "environment",
     index: "05",
     title: "The Environment",
-    detail: "Balance lighting, acoustics, space and infrastructure around human performance.",
+    detail: "Balance lighting, acoustics, comfort and infrastructure.",
     accent: "#d96a18",
     soft: "rgb(217 106 24 / 0.12)",
     Icon: Sun,
@@ -222,7 +221,7 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, ease: processEase }}
         >
-          <p className="text-[clamp(0.72rem,0.78cqw,0.9rem)] font-bold uppercase tracking-[0.2em] text-control-warm">
+          <p className="text-[clamp(0.84rem,0.9cqw,1.02rem)] font-bold uppercase tracking-[0.2em] text-control-warm">
             Human-Centred Philosophy
           </p>
           <motion.div
@@ -232,15 +231,15 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
             transition={{ duration: 0.62, delay: 0.18, ease: processEase }}
           />
           <h1
-            className={`mt-[1.75cqh] max-w-[11.8ch] text-balance rounded-[0.3rem] text-[clamp(2.05rem,2.52cqw,3.3rem)] font-extrabold leading-[1.02] tracking-normal transition-colors duration-500 md:text-[3.2cqw] ${
+            className={`mt-[1.75cqh] max-w-[11.8ch] text-balance rounded-[0.3rem] text-[clamp(2.35rem,2.8cqw,3.65rem)] font-extrabold leading-[1.01] tracking-normal transition-colors duration-500 md:text-[3.45cqw] ${
               narration.isSpeaking("headline") ? "bg-control-warm/10 text-control-text" : "text-control-text"
             }`}
           >
-            Design the <span className="text-control-warm">Control Room</span> around the people who make the decisions.
+            Design the <span className="text-control-warm">Control Room</span> around the people who operate it.
           </h1>
           <div className="mt-[0.9cqh] h-px w-8 bg-slate-300" />
           <p
-            className={`mt-[0.75cqh] max-w-[28rem] rounded-[0.3rem] text-[clamp(0.78rem,0.84cqw,0.98rem)] leading-[1.36] transition-colors duration-500 md:text-[0.8cqw] ${
+            className={`mt-[0.9cqh] max-w-[29rem] rounded-[0.3rem] text-[clamp(0.92rem,0.98cqw,1.14rem)] leading-[1.4] transition-colors duration-500 ${
               narration.isSpeaking("subheading") ? "bg-control-warm/10 text-control-text" : "text-control-soft"
             }`}
           >
@@ -343,10 +342,10 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     <principle.Icon aria-hidden="true" className="text-control-warm" size={32} strokeWidth={1.75} />
                   </motion.div>
                   <div>
-                    <p className="text-[clamp(0.84rem,0.96cqw,1.14rem)] font-semibold uppercase leading-tight text-white">
+                    <p className="text-[clamp(0.96rem,1.08cqw,1.26rem)] font-semibold uppercase leading-tight text-white">
                       {principle.label}
                     </p>
-                    <p className="mt-[0.32cqh] max-w-[11.4rem] text-[clamp(0.74rem,0.86cqw,1.02rem)] leading-[1.3] text-white/90">
+                    <p className="mt-[0.32cqh] max-w-[12rem] text-[clamp(0.84rem,0.96cqw,1.1rem)] leading-[1.28] text-white/90">
                       {principle.detail}
                     </p>
                   </div>
@@ -362,8 +361,8 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration: motionDuration, delay: 0.24, ease: processEase }}
         >
-          <p className="mb-[1cqh] text-[clamp(0.62rem,0.7cqw,0.8rem)] font-semibold uppercase tracking-[0.16em] text-control-text">
-            What should the room adapt to first?
+          <p className="mb-[1cqh] text-[clamp(0.74rem,0.82cqw,0.94rem)] font-semibold uppercase tracking-[0.16em] text-control-text">
+            What should the room adapt to?
           </p>
           <div className="grid h-[12.7cqh] grid-cols-5 overflow-hidden rounded-[0.32rem] border border-slate-200 bg-white/74 shadow-[0_1.1rem_2.5rem_rgb(15_23_42/0.07)] backdrop-blur-xl">
             {!state.reducedMotion ? (
@@ -448,11 +447,11 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
                     </motion.div>
                   </div>
                   <div className="relative z-10">
-                    <p className="text-[clamp(0.78rem,0.86cqw,1rem)] font-semibold leading-tight text-control-text">
+                    <p className="text-[clamp(0.92rem,0.98cqw,1.12rem)] font-semibold leading-tight text-control-text">
                       {item.title}
                     </p>
                     <div className="mt-[0.5cqh] h-px w-6" style={{ background: item.accent }} />
-                    <p className="mt-[0.48cqh] text-[clamp(0.6rem,0.66cqw,0.76rem)] font-medium leading-[1.24] text-control-soft">
+                    <p className="mt-[0.48cqh] text-[clamp(0.72rem,0.76cqw,0.88rem)] font-medium leading-[1.24] text-control-soft">
                       {item.detail}
                     </p>
                   </div>
@@ -478,14 +477,16 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
           ) : null}
           <div className={`grid h-full max-w-[54rem] grid-cols-[4.5rem_1fr] items-center rounded-[0.42rem] transition-colors duration-500 ${narration.isSpeaking("quote") ? "bg-control-warm/10" : ""}`}>
             <div className="flex h-full items-center justify-center text-control-warm">
-              <Quote aria-hidden="true" className="text-control-warm" size={34} strokeWidth={1.55} />
+              <span aria-hidden="true" className="font-serif text-[3.8rem] font-bold leading-none text-control-warm">
+                &ldquo;
+              </span>
             </div>
             <div className="border-l border-slate-200 pl-[1.2cqw]">
-              <p className="text-[clamp(0.78rem,0.88cqw,1rem)] font-medium leading-[1.28] text-control-text">
-                The operator should never have to adapt to a poorly designed room.
+              <p className="text-[clamp(0.9rem,1cqw,1.16rem)] font-medium leading-[1.28] text-control-text">
+                Don't make the operator adapt to the room.
               </p>
-              <p className="mt-[0.35cqh] text-[clamp(0.78rem,0.88cqw,1rem)] font-semibold leading-[1.25] text-control-warm">
-                The room should adapt to the operator.
+              <p className="mt-[0.35cqh] text-[clamp(0.9rem,1cqw,1.16rem)] font-semibold leading-[1.25] text-control-warm">
+                Make the room adapt to the operator.
               </p>
             </div>
           </div>
@@ -538,5 +539,3 @@ export function HumanCentredPhilosophyChapter({ chapter }: Props) {
     </article>
   );
 }
-
-

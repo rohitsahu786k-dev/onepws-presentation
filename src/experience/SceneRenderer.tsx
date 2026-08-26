@@ -2,6 +2,10 @@ import { experienceRedesignFlags } from "../config/experience-redesign";
 import type { Chapter } from "../data/contentTypes";
 import { ChapterScene } from "../components/scene/ChapterScene";
 import { getSceneComponent } from "./sceneRegistry";
+import {
+  ArchitecturalSystemsReferenceScene,
+  architecturalSystemChapterIds,
+} from "../scenes/room-experience/ArchitecturalSystemsReferenceScene";
 
 type Props = {
   chapter: Chapter;
@@ -9,6 +13,13 @@ type Props = {
 };
 
 export function SceneRenderer({ chapter, presenterPreview = false }: Props) {
+  if (
+    chapter.id === "architectural-systems" ||
+    architecturalSystemChapterIds.includes(chapter.id as (typeof architecturalSystemChapterIds)[number])
+  ) {
+    return <ArchitecturalSystemsReferenceScene chapter={chapter} />;
+  }
+
   if (
     chapter.id === "presentation-flow-selector" ||
     chapter.id === "complete-ecosystem" ||

@@ -44,54 +44,54 @@ type Differentiator = {
 const productCards: ProductCard[] = [
   {
     title: "Control Rooms",
-    description: "Mission-critical environments with integrated ergonomics, acoustics and technology.",
+    description: "Mission-critical environments designed for faster decisions, operator comfort and 24/7 performance.",
     metric: "450+",
-    metricLabel: "Control Rooms Delivered",
+    metricLabel: "Control Rooms",
     image: "/assets/products/control-room.png",
     accent: "#0b376d",
     Icon: PanelsTopLeft,
   },
   {
     title: "Control Desks",
-    description: "Ergonomic, modular and customizable consoles for optimal operator performance.",
+    description: "Ergonomic operator consoles engineered around people, technology and demanding operations.",
     metric: "75K+",
-    metricLabel: "Control Desks Installed",
+    metricLabel: "Control Desks",
     image: "/assets/products/console.png",
     accent: "#1262b3",
     Icon: SlidersHorizontal,
   },
   {
     title: "Raised Access Floor",
-    description: "High-performance flooring systems for cable management, flexibility and strength.",
-    metric: "10 L+",
-    metricLabel: "Sq. Ft. Raised Access Floor Installed",
+    description: "Flexible infrastructure for power, data and services-built for change and long-term performance.",
+    metric: "10L+ sq. ft.",
+    metricLabel: "Raised Access Flooring",
     image: "/assets/products/floor.png",
     accent: "#0f8b8d",
     Icon: Layers3,
   },
   {
     title: "Modular Operation Theatres",
-    description: "Hygienic, infection-controlled modular OT solutions built for safety and efficiency.",
+    description: "Precision-built clinical environments designed around hygiene, safety and operational efficiency.",
     metric: "200+",
-    metricLabel: "Modular OTs Delivered",
+    metricLabel: "Modular OTs",
     image: "/assets/products/mot.png",
     accent: "#6d3fc2",
     Icon: ShieldCheck,
   },
   {
     title: "Auditoriums",
-    description: "Acoustically optimized auditoriums that deliver exceptional sound, comfort and aesthetics.",
-    metric: "150+",
-    metricLabel: "Auditoriums Completed",
+    description: "Immersive spaces engineered for exceptional acoustics, visibility and audience experience.",
+    metric: "25+",
+    metricLabel: "Auditoriums",
     image: "/assets/products/auditoriums.png",
     accent: "#ef5b0c",
     Icon: Sofa,
   },
   {
     title: "Corporate Offices",
-    description: "Smart, collaborative and sustainable workspaces that enhance productivity.",
-    metric: "300,000+ ft²",
-    metricLabel: "Corporate Spaces Created",
+    description: "High-performance workplaces designed for collaboration, flexibility and employee experience.",
+    metric: "300,000+ sq. ft.",
+    metricLabel: "Corporate Workspaces",
     image: "/assets/products/corporate-offices.png",
     accent: "#5b8c2a",
     Icon: Building2,
@@ -100,38 +100,38 @@ const productCards: ProductCard[] = [
 
 const differentiators: Differentiator[] = [
   {
-    title: "End-to-End Capability",
-    detail: "From concept to completion. One partner. One responsibility.",
+    title: "End-to-End Expertise",
+    detail: "From concept and engineering to execution and support.",
     accent: "#e30613",
     Icon: Crosshair,
   },
   {
-    title: "Engineered for Performance",
-    detail: "Every product is built to meet international standards.",
+    title: "Engineered Around You",
+    detail: "Solutions configured around your people, processes and space.",
     accent: "#0b376d",
     Icon: ShieldCheck,
   },
   {
-    title: "Integrated Approach",
-    detail: "Products that work in harmony for seamless environments.",
+    title: "Performance by Design",
+    detail: "Engineered for reliability, safety and demanding environments.",
     accent: "#0f8b8d",
     Icon: Network,
   },
   {
-    title: "Customizable Solutions",
-    detail: "Designed around your needs. Flexible, scalable, future-ready.",
-    accent: "#6d3fc2",
-    Icon: SlidersHorizontal,
-  },
-  {
     title: "Sustainable by Design",
-    detail: "Low VOC, recyclable materials and energy-efficient systems.",
-    accent: "#5b8c2a",
+    detail: "Smarter materials and systems for lower environmental impact.",
+    accent: "#6d3fc2",
     Icon: Recycle,
   },
   {
-    title: "Proven Track Record",
-    detail: "Hundreds of successful projects across industries.",
+    title: "Integrated Ecosystem",
+    detail: "Products, technology and infrastructure designed to work together.",
+    accent: "#5b8c2a",
+    Icon: SlidersHorizontal,
+  },
+  {
+    title: "Proven at Scale",
+    detail: "Hundreds of complex environments successfully delivered.",
     accent: "#ef5b0c",
     Icon: UsersRound,
   },
@@ -162,14 +162,14 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
       <div className="absolute right-[-10cqw] top-[-18cqh] h-[38cqh] w-[44cqw] rounded-full bg-control-warm/5 blur-3xl" />
       <div className="absolute bottom-[-22cqh] left-[18cqw] h-[40cqh] w-[52cqw] rounded-full bg-slate-300/20 blur-3xl" />
 
-      <section className="absolute inset-x-[1.65cqw] bottom-[9cqh] top-[11.8cqh] z-20">
+      <section className="absolute inset-x-[1.65cqw] bottom-[5.8cqh] top-[11.8cqh] z-20">
         <div className="grid grid-cols-[minmax(0,1fr)_25cqw] items-start gap-[2cqw]">
           <motion.div animate={{ opacity: 1, y: 0 }} initial={state.reducedMotion ? false : { opacity: 0, y: 16 }} transition={{ duration, ease }}>
             <h1 className="text-balance text-[clamp(2.15rem,3.05cqw,4rem)] font-extrabold leading-[0.98] tracking-normal text-control-text md:text-[3.5cqw]">
-              Our Products. <span className="text-control-warm">Transforming Spaces.</span>
+              One Ecosystem. <span className="text-control-warm">Complete Spaces.</span>
             </h1>
             <p className="mt-[1.2cqh] max-w-[72rem] text-[clamp(0.95rem,1.08cqw,1.3rem)] leading-[1.38] text-slate-700 md:text-[1cqw]">
-              End-to-end interiors and infrastructure solutions designed for performance, safety and sustainability.
+              Integrated environments engineered around people, technology and performance.
             </p>
           </motion.div>
 
@@ -194,7 +194,7 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="mt-[2.1cqh] grid h-[46.5cqh] grid-cols-6 gap-[0.62cqw]"
+          className="mt-[2.1cqh] grid h-[47cqh] grid-cols-6 gap-[0.62cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 22 }}
           transition={{ duration, delay: 0.18, ease }}
         >
@@ -220,11 +220,11 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
                 </span>
               </div>
               <div className="flex min-h-0 flex-1 flex-col px-[0.8cqw] pb-[1cqh] pt-[0.7cqh] text-center">
-                <h2 className="min-h-[2.15lh] text-[clamp(0.9rem,1.05cqw,1.22rem)] font-semibold leading-[1.08] md:text-[0.9cqw]" style={{ color: product.accent }}>
+                <h2 className="min-h-[2.15lh] text-[clamp(1rem,1.12cqw,1.32rem)] font-semibold leading-[1.08] md:text-[1cqw]" style={{ color: product.accent }}>
                   {product.title}
                 </h2>
                 <div className="mx-auto mt-[0.75cqh] h-[2px] w-[2.4rem]" style={{ backgroundColor: product.accent }} />
-                <p className="mt-[1.1cqh] min-h-[4.4lh] text-[clamp(0.58rem,0.68cqw,0.8rem)] font-medium leading-[1.32] text-slate-700">
+                <p className="mt-[1.1cqh] min-h-[4.4lh] text-[clamp(0.82rem,0.86cqw,1.02rem)] font-medium leading-[1.38] text-slate-700">
                   {product.description}
                 </p>
                 <div className="mt-auto rounded-[0.65rem] border border-slate-200/80 bg-white/72 px-[0.65cqw] py-[0.75cqh] text-left shadow-[0_0.45rem_1.1rem_rgb(15_23_42/0.045)]">
@@ -245,22 +245,22 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
 
         <motion.section
           animate={{ opacity: 1, y: 0 }}
-          className="mt-[1.55cqh] overflow-hidden rounded-[0.95rem] border border-white/90 bg-white/82 px-[1.15cqw] py-[1.15cqh] shadow-[0_1rem_2.5rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="mt-[1.55cqh] min-h-[15cqh] overflow-hidden rounded-[0.95rem] border border-white/90 bg-white/82 px-[1.4cqw] py-[1.55cqh] shadow-[0_1rem_2.5rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 18 }}
           transition={{ duration, delay: 0.46, ease }}
         >
-          <div className="grid grid-cols-[13cqw_1fr] items-center gap-[1cqw]">
+          <div className="grid h-full grid-cols-[14cqw_1fr] items-center gap-[1.2cqw]">
             <div>
-              <p className="text-[clamp(1.05rem,0.88cqw,1.2rem)] font-semibold uppercase tracking-[0em] text-control-text">OnePWS Key Differentiators</p>
-              <div className="mt-[0.65cqh] h-[2px] w-[2.4rem] bg-control-warm" />
+              <p className="text-[clamp(1.25rem,1.05cqw,1.55rem)] font-semibold uppercase tracking-[0em] text-control-text">Why OnePWS</p>
+              <div className="mt-[0.85cqh] h-[3px] w-[3.1rem] bg-control-warm" />
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-3 gap-x-6 gap-y-5">
               {differentiators.map((item, index) => (
-                <div className={`grid grid-cols-[2.6rem_1fr] items-center gap-[0.65cqw] px-[0.8cqw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
-                  <item.Icon aria-hidden="true" color={item.accent} size={32} strokeWidth={1.65} />
+                <div className={`grid grid-cols-[3.35rem_1fr] items-center gap-[0.8cqw] px-[0.95cqw] ${index > 0 ? "border-l border-slate-200" : ""}`} key={item.title}>
+                  <item.Icon aria-hidden="true" color={item.accent} size={42} strokeWidth={1.65} />
                   <div>
-                    <p className="text-[clamp(0.8rem,0.78cqw,1.2rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
-                    <p className="mt-[0.28cqh] text-[clamp(0.66rem,0.68cqw,0.8rem)] font-medium leading-[1.2] text-slate-600">{item.detail}</p>
+                    <p className="text-[clamp(0.96rem,0.9cqw,1.28rem)] font-semibold leading-[1.08] text-control-text">{item.title}</p>
+                    <p className="mt-[0.42cqh] text-[clamp(0.78rem,0.74cqw,0.94rem)] font-medium leading-[1.25] text-slate-600">{item.detail}</p>
                   </div>
                 </div>
               ))}
@@ -305,5 +305,3 @@ export function ProductsTransformingSpacesChapter({ chapter }: { chapter: Chapte
     </article>
   );
 }
-
-

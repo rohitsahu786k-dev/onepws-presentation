@@ -12,9 +12,35 @@ export function ProgressIndicator() {
   // Shown only where the slide is actually voiced, so the figure is measured
   // audio rather than an estimate.
   const slideNarrationMs = narrationDurationFor(state.chapterId);
+  const architecturalStep =
+    chapter.id === "architectural-lighting-systems"
+      ? "1 of 7"
+      : chapter.id === "architectural-hvac-systems"
+        ? "2 of 7"
+        : chapter.id === "architectural-acoustic-systems"
+          ? "3 of 7"
+          : chapter.id === "architectural-power-systems"
+            ? "4 of 7"
+            : chapter.id === "architectural-structured-cabling"
+              ? "5 of 7"
+              : chapter.id === "architectural-security-systems"
+                ? "6 of 7"
+                : chapter.id === "architectural-fire-safety-systems"
+                  ? "7 of 7"
+                  : null;
   const displayShortTitle =
     chapter.id === "mission-control-definition"
       ? "Mission-Critical Insight"
+      : chapter.id === "products-transforming-spaces"
+        ? "Complete Spaces"
+      : chapter.id === "complete-ecosystem"
+        ? "Connected Intelligence"
+      : chapter.id === "console-portfolio"
+        ? "Console Portfolio"
+      : chapter.id === "intelligent-features"
+        ? "Console Intelligence"
+      : chapter.id === "mechanical-strength-console"
+        ? "Mechanical Strength"
       : chapter.id === "human-centred-philosophy"
         ? "Human-Centred Philosophy"
         : chapter.id === "ergonomic-methodology"
@@ -32,6 +58,8 @@ export function ProgressIndicator() {
                     : chapter.id === "unified-control-room"
                       ? "Unified Control Room"
                       : chapter.id === "architectural-systems"
+                        ? "Architectural Systems"
+                      : architecturalStep
                         ? "Architectural Systems"
                         : chapter.id === "room-recognizes-you"
                   ? "Room Recognizes You"
@@ -79,7 +107,7 @@ export function ProgressIndicator() {
 
   return (
     <header className={`pointer-events-none absolute inset-x-[var(--stage-content-x)] top-[var(--stage-safe-y)] z-30 transition-opacity duration-300 pws-nav-${navigationState} ${isDarkScene ? "pws-progress-on-dark" : ""}`}>
-      <div className="grid grid-cols-[minmax(9.5rem,0.24fr)_minmax(0,1fr)_minmax(9.5rem,0.24fr)] items-start gap-[1.2cqw]">
+      <div className="grid grid-cols-[minmax(9.5rem,0.22fr)_minmax(0,1fr)_minmax(12rem,0.28fr)] items-start gap-[1.2cqw]">
         <div className="pointer-events-auto min-w-0">
           <OnePwsLogo compact lightOnDark={isDarkScene} />
         </div>
@@ -97,8 +125,8 @@ export function ProgressIndicator() {
               {displayShortTitle}
             </p>
             <p className="mt-2 text-xs text-control-muted">
-              {slideNarrationMs ? `${formatClock(slideNarrationMs)} narration` : null}
-              {slideNarrationMs ? <span className="px-1 text-control-line">|</span> : null}
+              {architecturalStep ?? (slideNarrationMs ? `${formatClock(slideNarrationMs)} narration` : null)}
+              {(architecturalStep || slideNarrationMs) ? <span className="px-1 text-control-line">|</span> : null}
               {formatRemaining(model.remainingDurationMs)}
             </p>
           </div>

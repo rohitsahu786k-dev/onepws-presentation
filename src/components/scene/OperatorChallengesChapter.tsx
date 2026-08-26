@@ -28,10 +28,10 @@ type ChallengeChoice = {
 const fallbackChoice: ChallengeChoice = {
   id: "too-much-monitor",
   index: "01",
-  title: "Too much to monitor",
-  detail: "Critical information competes for attention.",
+  title: "Information Overload",
+  detail: "Too much information competes for attention.",
   response:
-    "When information, equipment and the environment are not aligned, the operator must work harder to understand the situation and respond.",
+    "Critical information competes for attention, increasing cognitive load and slowing situational understanding.",
 };
 
 const choices: ChallengeChoice[] = [
@@ -39,30 +39,30 @@ const choices: ChallengeChoice[] = [
   {
     id: "too-far-reach",
     index: "02",
-    title: "Too far to reach",
-    detail: "Frequently used controls demand unnecessary movement.",
-    response: "Frequently used controls should remain accessible without repeated stretching or repositioning.",
+    title: "Excessive Reach",
+    detail: "Poor equipment placement creates unnecessary movement.",
+    response: "Repeated movement increases physical effort and makes frequently used controls harder to access.",
   },
   {
     id: "static-posture",
     index: "03",
-    title: "Too long in one posture",
+    title: "Prolonged Posture",
     detail: "Static working positions increase physical strain.",
-    response: "Static working positions can increase physical strain during long operational shifts.",
+    response: "Static working positions contribute to fatigue and discomfort during extended operations.",
   },
   {
     id: "too-many-distractions",
     index: "04",
-    title: "Too many distractions",
+    title: "Environmental Distractions",
     detail: "Lighting, noise and visual clutter reduce focus.",
-    response: "The environment should reduce visual, acoustic and physical distractions when clarity matters most.",
+    response: "Poor lighting, noise and visual clutter compete for attention and reduce concentration.",
   },
   {
     id: "difficult-coordinate",
     index: "05",
-    title: "Too difficult to coordinate",
-    detail: "People and information do not come together quickly enough.",
-    response: "People and information should come together quickly when situations escalate.",
+    title: "Coordination Gaps",
+    detail: "People and information don't come together fast enough.",
+    response: "Disconnected people, systems and information can delay understanding and coordinated response.",
   },
 ];
 
@@ -176,13 +176,13 @@ export function OperatorChallengesChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[3.55cqw] top-[61.2cqh] w-[min(69cqw,84rem)]"
+          className="absolute left-[3.55cqw] top-[57.2cqh] w-[min(74cqw,90rem)]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 16 }}
           transition={{ duration: motionDuration, delay: 0.2, ease: processEase }}
         >
-          <div className="mb-[1.05cqh] flex items-center gap-5">
-            <p className="shrink-0 text-[clamp(0.68rem,0.75cqw,0.86rem)] font-bold uppercase tracking-[0.28em] text-control-warm">
-              {isRiskScene ? "Select a risk to see how it affects operations." : "Select the challenge that affects your operation most."}
+          <div className="mb-[1.25cqh] flex items-center gap-5">
+            <p className="shrink-0 text-[clamp(0.78rem,0.88cqw,1rem)] font-bold uppercase tracking-[0.28em] text-control-warm">
+              {isRiskScene ? "Select a risk to see how it affects operations." : "What challenges your operators most?"}
             </p>
             <div className="relative h-px flex-1 overflow-hidden bg-slate-300">
               <motion.div
@@ -193,7 +193,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
               />
             </div>
           </div>
-          <div className="grid grid-cols-5 gap-[1cqw]">
+          <div className="grid grid-cols-5 gap-[1.1cqw]">
             {sceneChoices.map((choice, index) => {
               const isSelected = choice.id === selected.id;
 
@@ -201,7 +201,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
                 <motion.button
                   animate={{ opacity: 1, y: 0 }}
                   aria-pressed={isSelected}
-                  className={`group relative flex h-[clamp(7.15rem,13cqh,8.65rem)] flex-col overflow-hidden rounded-[0.42rem] border px-[clamp(0.78rem,0.88cqw,1rem)] py-[clamp(0.58rem,0.72cqh,0.8rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
+                  className={`group relative flex h-[clamp(9.4rem,16.5cqh,11.2rem)] flex-col overflow-hidden rounded-[0.72rem] border px-[clamp(1rem,1.05cqw,1.25rem)] py-[clamp(0.9rem,1.05cqh,1.15rem)] text-left shadow-[0_0.9rem_2rem_rgb(15_23_42/0.06)] backdrop-blur-xl transition-colors ${
                     isSelected
                       ? "border-control-warm bg-white/88 shadow-[0_1rem_2.4rem_rgb(207_31_43/0.20)]"
                       : "border-slate-300/90 bg-white/72 hover:border-control-warm/50"
@@ -222,14 +222,14 @@ export function OperatorChallengesChapter({ chapter }: Props) {
                       transition={{ duration: 0.46, ease: processEase }}
                     />
                   ) : null}
-                  <span className="block text-[clamp(0.95rem,1.08cqw,1.24rem)] font-semibold tracking-[0.05em] text-control-warm">
+                  <span className="block text-[clamp(1.12rem,1.25cqw,1.45rem)] font-semibold tracking-[0.05em] text-control-warm">
                     {choice.index}
                   </span>
-                  <span className="mt-[0.48cqh] block text-[clamp(0.72rem,0.8cqw,0.92rem)] font-semibold leading-tight text-control-text">
+                  <span className="mt-[0.62cqh] block text-[clamp(0.9rem,0.98cqw,1.12rem)] font-semibold leading-tight text-control-text">
                     {choice.title}
                   </span>
-                  <span className="mt-[0.45cqh] block h-px w-8 bg-control-warm/70" />
-                  <span className="mt-[0.45cqh] block overflow-hidden text-[clamp(0.52rem,0.56cqw,0.64rem)] leading-[1.2] text-control-soft [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
+                  <span className="mt-[0.58cqh] block h-px w-10 bg-control-warm/70" />
+                  <span className="mt-[0.62cqh] block overflow-hidden text-[clamp(0.7rem,0.72cqw,0.84rem)] font-medium leading-[1.24] text-control-soft [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
                     {choice.detail}
                   </span>
                   {isSelected ? <span className="absolute inset-x-0 bottom-0 h-1 bg-control-warm" /> : null}
@@ -241,7 +241,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[calc(12.3cqh-23px)] left-[3.55cqw] grid h-[clamp(4.7rem,7.5cqh,5.7rem)] w-[min(69cqw,84rem)] overflow-hidden rounded-[0.45rem] border border-slate-300/90 bg-white/84 shadow-[0_1rem_2.2rem_rgb(15_23_42/0.08)] backdrop-blur-xl"
+          className="absolute bottom-[calc(12.3cqh-23px)] left-[3.55cqw] grid h-[clamp(4.7rem,7.5cqh,5.7rem)] w-[min(74cqw,90rem)] overflow-hidden rounded-[0.45rem] border border-slate-300/90 bg-white/84 shadow-[0_1rem_2.2rem_rgb(15_23_42/0.08)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
           transition={{ duration: motionDuration, delay: 0.54, ease: processEase }}
         >
@@ -258,7 +258,7 @@ export function OperatorChallengesChapter({ chapter }: Props) {
             <div className="flex items-center border-r border-slate-300 px-[1.25cqw]">
               <div className="border-l-2 border-control-warm pl-[0.9cqw]">
                 <p className="text-[clamp(0.78rem,0.9cqw,1.02rem)] font-semibold leading-tight text-control-text">
-                  {isRiskScene ? "Operational impact" : "How this affects the operator"}
+                  {isRiskScene ? "Operational impact" : "The Impact"}
                 </p>
               </div>
             </div>
@@ -313,5 +313,3 @@ export function OperatorChallengesChapter({ chapter }: Props) {
     </article>
   );
 }
-
-

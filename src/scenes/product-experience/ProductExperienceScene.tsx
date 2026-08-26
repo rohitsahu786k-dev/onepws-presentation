@@ -133,112 +133,102 @@ const consolePortfolioCards: PortfolioCard[] = [
   {
     id: "edge",
     name: "XLAT XE",
-    title: "Curve Console",
-    description: "Premium curved command desk for immersive visibility, superior reach and operator comfort.",
+    title: "Versatile Command Console",
+    description: "Designed to adapt around the operator, integrating technology and controls into a highly ergonomic command environment.",
     image: "/assets/products/consoles/xlat-xe.png",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.12)",
     specs: [
-      { label: "Best for", value: "Command & Control Centers", Icon: Crosshair },
-      { label: "Configuration", value: "Curved / Semi-Circular", Icon: SlidersHorizontal },
-      { label: "Operator", value: "1 to 6", Icon: UsersRound },
-      { label: "Key Highlight", value: "Immersive view, superior reach", Icon: Star },
+      { label: "Key Features", value: "Dual-pole sit-stand mechanism\nIntegrated anti-collision\nFloating CPU cabinet\nFloating slat wall\nFlexible cable management", Icon: SlidersHorizontal },
+      { label: "Key Highlight", value: "Adaptable ergonomics + integrated technology", Icon: Star },
     ],
   },
   {
     id: "linear",
     name: "XLAT SE",
-    title: "Straight Console",
-    description: "Clean linear console for focused monitoring, modular expansion and efficient operations.",
+    title: "Intelligent Operator Console",
+    description: "An operator-focused console with an intelligent dashboard designed for comfort, accessibility and faster control during critical operations.",
     image: "/assets/products/consoles/xlat-se.png",
     accent: "#2367b7",
     soft: "rgb(35 103 183 / 0.12)",
     specs: [
-      { label: "Best for", value: "NOC, SOC, Utility & Transport", Icon: Crosshair },
-      { label: "Configuration", value: "Straight / Linear", Icon: SlidersHorizontal },
-      { label: "Operator", value: "1 to 4", Icon: UsersRound },
-      { label: "Key Highlight", value: "Space efficient, modular", Icon: Star },
+      { label: "Key Features", value: "Intelligent dashboard\nSmart-touch controls\nCompact footprint\nOptimized cable management\nConfigurable equipment storage", Icon: SlidersHorizontal },
+      { label: "Key Highlight", value: "Compact design + intelligent control", Icon: Star },
     ],
   },
   {
     id: "vista",
     name: "XLAT ZE",
-    title: "Multi-Tier Console",
-    description: "Layered control desk for stronger sightlines, display hierarchy and shared awareness.",
+    title: "High-Performance Operator Console",
+    description: "Engineered for extended mission-critical operations with ergonomic detailing, modular intelligence and integrated equipment management.",
     image: "/assets/products/consoles/xlat-ze.png",
     accent: "#0f9678",
     soft: "rgb(15 150 120 / 0.12)",
     specs: [
-      { label: "Best for", value: "Control Rooms, Surveillance", Icon: Crosshair },
-      { label: "Configuration", value: "Multi-Tier", Icon: SlidersHorizontal },
-      { label: "Operator", value: "1 to 5", Icon: UsersRound },
-      { label: "Key Highlight", value: "Optimized sightlines, information hierarchy", Icon: Star },
+      { label: "Key Features", value: "PU-edge ergonomic worksurface\nMono-pole construction\nModular architecture\nCPU / Server / KVM integration\nPatch-panel integration", Icon: SlidersHorizontal },
+      { label: "Key Highlight", value: "Ergonomics + modular intelligence", Icon: Star },
     ],
   },
   {
     id: "elevate",
     name: "Dynamic XE",
-    title: "Sit-Stand Console",
-    description: "Height-adjustable consoles that adapt to every operator and every task.",
+    title: "Next-Generation Intelligent Console",
+    description: "A highly flexible operator environment developed for critical operations, advanced control and enhanced operator performance.",
     image: "/assets/products/consoles/dynamic-xe.png",
     accent: "#7a3db7",
     soft: "rgb(122 61 183 / 0.12)",
     specs: [
-      { label: "Best for", value: "24/7 Operations, Mission Critical Environments", Icon: Crosshair },
-      { label: "Configuration", value: "Sit-Stand / Height Adjustable", Icon: SlidersHorizontal },
-      { label: "Operator", value: "1 to 4", Icon: UsersRound },
-      { label: "Key Highlight", value: "Healthier posture, dynamic adjustment", Icon: Star },
+      { label: "Key Features", value: "3D motion control\nEmergency indication\nProgrammable touchscreen\nSingle-touch control\nIntegrated visualization\nErgonomic adjustment", Icon: SlidersHorizontal },
+      { label: "Key Highlight", value: "Intelligent control + operator adaptability", Icon: Star },
     ],
   },
   {
     id: "collab",
     name: "Center HUB",
-    title: "Collaboration Console",
-    description: "Designed for teamwork, briefings and decision-making in real time.",
+    title: "Collaborative Control Hub",
+    description: "A centralized ergonomic workstation created for teamwork, shared monitoring and collaborative operations.",
     image: "/assets/products/consoles/center-hub.png",
     accent: "#f06b18",
     soft: "rgb(240 107 24 / 0.12)",
     specs: [
-      { label: "Best for", value: "War Rooms, Meeting Rooms", Icon: Crosshair },
-      { label: "Configuration", value: "Open / Collaborative", Icon: SlidersHorizontal },
-      { label: "Operator", value: "4 to 12", Icon: UsersRound },
-      { label: "Key Highlight", value: "Built for collaboration, seamless interaction", Icon: Star },
+      { label: "Best suited for", value: "CCTV - Emergency Response - Industrial Monitoring - Collaborative Control", Icon: Crosshair },
+      { label: "Key Highlight", value: "Centralized teamwork + shared awareness", Icon: Star },
     ],
   },
 ];
 
 const consoleSupportItems: PortfolioSupport[] = [
   {
-    title: "Certified Ergonomics",
-    detail: "Designed to meet ISO 11064 standards for control rooms.",
+    title: "Ergonomic by Design",
+    detail: "Designed around operator comfort, reach and visibility.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: ShieldCheck,
   },
   {
-    title: "Seamless Integration",
-    detail: "Fully compatible with displays, AV, IT and building systems.",
+    title: "Technology Integrated",
+    detail: "Built to accommodate displays, equipment and control systems.",
     accent: "#2367b7",
     soft: "rgb(35 103 183 / 0.11)",
     Icon: Puzzle,
   },
   {
-    title: "Built to Last",
-    detail: "Durable materials and precision engineering for 24/7 uptime.",
+    title: "Modular Architecture",
+    detail: "Flexible configurations that adapt to operational requirements.",
     accent: "#0f9678",
     soft: "rgb(15 150 120 / 0.11)",
     Icon: Settings,
   },
   {
-    title: "Future Ready",
-    detail: "Modular architecture for easy upgrades and scalability.",
+    title: "Built for 24/7 Operations",
+    detail: "Engineered for demanding mission-critical environments.",
     accent: "#7a3db7",
     soft: "rgb(122 61 183 / 0.11)",
     Icon: SlidersHorizontal,
   },
   {
-    title: "End-to-End Support",
-    detail: "Design, delivery, installation and lifecycle support.",
+    title: "Future Ready",
+    detail: "Designed to accommodate evolving technology and operational needs.",
     accent: "#f06b18",
     soft: "rgb(240 107 24 / 0.11)",
     Icon: Headphones,
@@ -315,72 +305,72 @@ const consoleDetailSlides: ConsoleDetail[] = consolePortfolioCards.map((card) =>
     edge: {
       chapterId: "console-detail-edge",
       modelPath: "/assets/models/consoles/xlat-xe.glb",
-      descriptor: "Curved command console",
-      promise: "XLAT XE wraps the workspace around the operator so critical information, controls and displays stay naturally within view and reach.",
+      descriptor: "Versatile command console",
+      promise: "XLAT XE adapts around the operator, integrating technology and controls into a highly ergonomic command environment.",
       fit: "Best suited for command and control centers where one operator must maintain panoramic awareness across multiple systems.",
-      capabilities: ["Immersive semi-circular viewing geometry", "Comfortable reach to primary controls", "Integrated monitor and AV support", "Built for 1 to 6 operator positions"],
-      operatorValue: ["Wider situational awareness", "Reduced movement and visual strain", "Faster cross-screen interpretation"],
+      capabilities: ["Dual-pole sit-stand mechanism", "Integrated anti-collision", "Floating CPU cabinet", "Floating slat wall", "Flexible cable management"],
+      operatorValue: ["Adaptable ergonomics", "Integrated technology", "Controls organized around operator reach"],
       colors: commonConsoleColors,
       views: commonConsoleViews,
       hotspots: commonHotspots,
       ergonomicViews: commonErgoViews,
-      relatedFeatures: ["Curved work surface", "Integrated monitor spine", "Hidden service bay", "Ambient edge lighting"],
+      relatedFeatures: ["Sit-stand command position", "Floating CPU storage", "Floating slat wall", "Flexible cable routing"],
     },
     linear: {
       chapterId: "console-detail-linear",
       modelPath: "/assets/models/consoles/xlat-se.glb",
-      descriptor: "Straight modular console",
-      promise: "XLAT SE gives operations teams a disciplined straight-line workstation that is easy to deploy, extend and maintain.",
-      fit: "Best suited for NOC, SOC, utility and transport operations where layouts must stay organized, scalable and easy to maintain.",
-      capabilities: ["Straight modular console architecture", "Space-efficient footprint", "Simple expansion across operator rows", "Built for 1 to 4 operator positions"],
-      operatorValue: ["Cleaner task focus", "Faster deployment", "Easy future reconfiguration"],
+      descriptor: "Intelligent operator console",
+      promise: "XLAT SE combines an operator-focused console with an intelligent dashboard for comfort, accessibility and faster control during critical operations.",
+      fit: "Best suited for critical operations where compact planning, accessible controls and intelligent operator support are required.",
+      capabilities: ["Intelligent dashboard", "Smart-touch controls", "Compact footprint", "Optimized cable management", "Configurable equipment storage"],
+      operatorValue: ["Compact design", "Intelligent control", "Comfortable access to critical functions"],
       colors: commonConsoleColors,
       views: commonConsoleViews,
       hotspots: commonHotspots,
       ergonomicViews: commonErgoViews,
-      relatedFeatures: ["Linear row planning", "Modular equipment bays", "Service-ready rear access", "Desk-to-video-wall alignment"],
+      relatedFeatures: ["Intelligent dashboard", "Smart-touch controls", "Compact equipment storage", "Optimized cable routing"],
     },
     vista: {
       chapterId: "console-detail-vista",
       modelPath: "/assets/models/consoles/xlat-ze.glb",
-      descriptor: "Multi-tier visibility console",
-      promise: "XLAT ZE organizes information vertically so priority screens, task displays and shared views sit in a clearer hierarchy.",
-      fit: "Best suited for surveillance and control rooms where screen hierarchy, sightlines and shared wall visibility matter most.",
-      capabilities: ["Layered monitor tiers", "Improved information hierarchy", "Clear line-of-sight planning", "Built for 1 to 5 operator positions"],
-      operatorValue: ["Better visibility", "Lower visual search time", "More confident monitoring"],
+      descriptor: "High-performance operator console",
+      promise: "XLAT ZE supports extended mission-critical operations with ergonomic detailing, modular intelligence and integrated equipment management.",
+      fit: "Best suited for extended operations that need ergonomic worksurfaces, modular equipment planning and integrated technical infrastructure.",
+      capabilities: ["PU-edge ergonomic worksurface", "Mono-pole construction", "Modular architecture", "CPU / Server / KVM integration", "Patch-panel integration"],
+      operatorValue: ["Ergonomic support for long shifts", "Modular intelligence", "Integrated equipment management"],
       colors: commonConsoleColors,
       views: commonConsoleViews,
       hotspots: commonHotspots,
       ergonomicViews: commonErgoViews,
-      relatedFeatures: ["Raised monitor deck", "Tiered cable routing", "Sightline-first geometry", "Supervisor visibility support"],
+      relatedFeatures: ["PU-edge worksurface", "Mono-pole console structure", "Integrated KVM and server planning", "Patch-panel access"],
     },
     elevate: {
       chapterId: "console-detail-elevate",
       modelPath: "/assets/models/consoles/dynamic-xe.glb",
-      descriptor: "Sit-stand mission console",
-      promise: "Dynamic XE adapts to the operator in real time, supporting posture changes and long-shift comfort without disrupting the mission.",
-      fit: "Best suited for 24/7 mission-critical teams where healthier posture and dynamic adjustment directly support performance.",
-      capabilities: ["Height-adjustable sit-stand movement", "Stable equipment support", "Personal ergonomic positioning", "Built for 1 to 4 operator positions"],
-      operatorValue: ["Reduced fatigue", "Healthier posture", "Sustained focus across long shifts"],
+      descriptor: "Next-generation intelligent console",
+      promise: "Dynamic XE creates a highly flexible operator environment for critical operations, advanced control and enhanced operator performance.",
+      fit: "Best suited for critical operations that require intelligent control, adaptable ergonomics and fast operator response.",
+      capabilities: ["3D motion control", "Emergency indication", "Programmable touchscreen", "Single-touch control", "Integrated visualization", "Ergonomic adjustment"],
+      operatorValue: ["Intelligent control", "Operator adaptability", "Enhanced performance during critical operations"],
       colors: commonConsoleColors,
       views: commonConsoleViews,
       hotspots: commonHotspots,
       ergonomicViews: commonErgoViews,
-      relatedFeatures: ["Motorized height adjustment", "Position memory", "Stable lift structure", "Sit-stand cable management"],
+      relatedFeatures: ["3D motion control", "Programmable touchscreen", "Single-touch controls", "Integrated visualization"],
     },
     collab: {
       chapterId: "console-detail-collab",
       modelPath: "/assets/models/consoles/center-hub.glb",
-      descriptor: "Team response console",
-      promise: "Center HUB creates a shared workspace for briefings, escalations and coordinated action when decisions need the whole team.",
-      fit: "Best suited for war rooms, meeting rooms and command reviews where multiple people need shared visibility and fast alignment.",
-      capabilities: ["Open collaborative layout", "Shared display and AV integration", "Team-facing work surface", "Built for 4 to 12 operators"],
-      operatorValue: ["Better team synchronization", "Faster briefings", "Clearer decisions in real time"],
+      descriptor: "Collaborative control hub",
+      promise: "Center HUB creates a centralized ergonomic workstation for teamwork, shared monitoring and collaborative operations.",
+      fit: "Best suited for CCTV, emergency response, industrial monitoring and collaborative control environments.",
+      capabilities: ["Centralized ergonomic workstation", "Shared monitoring support", "Collaborative control layout", "Team-focused operational surface"],
+      operatorValue: ["Centralized teamwork", "Shared awareness", "Faster collaborative response"],
       colors: commonConsoleColors,
       views: commonConsoleViews,
       hotspots: commonHotspots,
       ergonomicViews: commonErgoViews,
-      relatedFeatures: ["Shared work surface", "Briefing mode", "Collaborative AV routing", "Multi-user cable access"],
+      relatedFeatures: ["CCTV monitoring", "Emergency response coordination", "Industrial monitoring", "Collaborative control"],
     },
   };
 
@@ -426,7 +416,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
       <section className="absolute inset-0 z-20 px-[2.75cqw] py-[3cqh]">
         <motion.aside
           animate={{ opacity: 1, y: 0 }}
-          className="absolute left-[2.75cqw] top-[13cqh] z-20 w-[20.7cqw]"
+          className="absolute left-[2.75cqw] top-[13cqh] z-20 h-[64cqh] w-[20.7cqw]"
           initial={state.reducedMotion ? false : { opacity: 0, y: 14 }}
           transition={{ duration, ease: processEase }}
         >
@@ -434,11 +424,11 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
             Our Console Range
           </p>
           <div className="mt-[1.9cqh] h-[2px] w-8 bg-control-warm" />
-          <h1 className="mt-[1.8cqh] text-balance text-[clamp(1.98rem,2.58cqw,3.42rem)] font-bold leading-[1.03] tracking-normal text-control-text md:text-[3.6cqw]">
+          <h1 className="mt-[1.8cqh] text-balance text-[clamp(1.98rem,2.58cqw,3.42rem)] font-extrabold leading-[1.03] tracking-normal text-control-text md:text-[3.6cqw]">
             Control-Room Console <span className="text-control-warm">Portfolio.</span>
           </h1>
           <div className="mt-[2.2cqh] h-px w-8 bg-slate-300" />
-          <p className="mt-[1.7cqh] max-w-[16.8rem] text-[clamp(0.82rem,0.91cqw,1.08rem)] leading-[1.54] text-control-text md:text-[0.8cqw]">
+          <p className="mt-[1.7cqh] max-w-[17.8rem] text-[clamp(1rem,1.04cqw,1.22rem)] leading-[1.48] text-control-text">
             Engineered for performance.
             <br />
             Designed for people.
@@ -448,7 +438,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="mt-[3.8cqh] flex items-start gap-[0.9cqw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95cqw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] "
+            className="absolute bottom-0 left-0 right-0 flex items-start gap-[0.9cqw] rounded-[0.8rem] border border-white/85 bg-white/76 p-[0.95cqw] shadow-[0_1.1rem_2.65rem_rgb(15_23_42/0.095)] "
             initial={state.reducedMotion ? false : { opacity: 0, y: 18, scale: 0.96 }}
             transition={{ duration: 0.72, delay: 0.42, ease: popEase }}
             whileHover={state.reducedMotion ? undefined : { y: -3, scale: 1.01, transition: { duration: 0.36, ease: precisionEase } }}
@@ -467,7 +457,7 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate="show"
-          className="absolute left-[25.3cqw] right-[2.75cqw] top-[13.8cqh] grid h-[57.2cqh] grid-cols-5 gap-[0.82cqw] [perspective:1600px]"
+          className="absolute left-[25.3cqw] right-[2.75cqw] top-[13.8cqh] grid h-[63.2cqh] grid-cols-5 gap-[0.82cqw] [perspective:1600px]"
           initial="hidden"
           variants={{
             hidden: {},
@@ -528,34 +518,44 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                 ) : null}
               </div>
               <div className="flex min-h-0 flex-1 flex-col px-[0.92cqw] py-[1.08cqh]">
-                <div className="flex items-start justify-between gap-[0.5cqw]">
+                <div className="flex h-[5.1rem] items-start justify-between gap-[0.5cqw]">
                   <div>
-                    <p className="text-[clamp(0.76rem,0.86cqw,1.04rem)] font-semibold uppercase leading-none" style={{ color: item.accent }}>
+                    <p className="text-[clamp(0.92rem,1.02cqw,1.18rem)] font-semibold uppercase leading-none" style={{ color: item.accent }}>
                       {item.name}
                     </p>
-                    <h2 className="mt-[0.48cqh] text-[clamp(0.76rem,0.86cqw,1.04rem)] font-semibold leading-[1.08] text-control-text">
+                    <h2 className="mt-[0.55cqh] text-[clamp(0.92rem,1cqw,1.16rem)] font-semibold leading-[1.08] text-control-text">
                       {item.title}
                     </h2>
                   </div>
                   <span className="mt-[-0.08rem] h-[0.54rem] w-[0.54rem] shrink-0 rounded-full shadow-[0_0_0_0.28rem_rgb(255_255_255/0.9)]" style={{ backgroundColor: item.accent }} />
                 </div>
-                <p className="mt-[0.78cqh] min-h-[4.9cqh] text-[clamp(0.58rem,0.64cqw,0.76rem)] leading-[1.3] text-slate-700">
+                <p className="mt-[0.55cqh] h-[7.3rem] text-[clamp(0.72rem,0.76cqw,0.9rem)] font-medium leading-[1.32] text-slate-700">
                   {item.description}
                 </p>
-                <div className="my-[0.72cqh] h-px bg-slate-200/90" />
-                <dl className="grid gap-[0.5cqh] self-stretch">
+                <div className="my-[0.82cqh] h-px bg-slate-200/90" />
+                <dl className="grid gap-[0.58cqh] self-stretch">
                   {primarySpecs.map((spec, specIndex) => (
                     <motion.div
                       animate={{ opacity: 1, x: 0 }}
-                      className="grid grid-cols-[1.02rem_1fr] gap-x-[0.42cqw] rounded-[0.52rem] bg-slate-50/78 px-[0.48cqw] py-[0.48cqh]"
+                      className="grid grid-cols-[1.22rem_1fr] gap-x-[0.48cqw] rounded-[0.58rem] bg-slate-50/78 px-[0.58cqw] py-[0.62cqh]"
                       initial={state.reducedMotion ? false : { opacity: 0, x: -8 }}
                       key={spec.label}
                       transition={{ duration: 0.46, delay: 0.38 + cardIndex * 0.08 + specIndex * 0.035, ease: precisionEase }}
                     >
-                      <spec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15} strokeWidth={1.9} />
+                      <spec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={17} strokeWidth={1.9} />
                       <div>
-                        <dt className="text-[clamp(0.48rem,0.53cqw,0.63rem)] font-semibold uppercase leading-none text-control-text">{spec.label}</dt>
-                        <dd className="mt-[0.13rem] text-[clamp(0.48rem,0.54cqw,0.65rem)] leading-[1.18] text-slate-700">{spec.value}</dd>
+                        <dt className="text-[clamp(0.58rem,0.62cqw,0.74rem)] font-semibold uppercase leading-none text-control-text">{spec.label}</dt>
+                        {spec.label === "Key Features" ? (
+                          <dd>
+                            <ul className="mt-[0.32rem] list-disc space-y-[0.12rem] pl-[1rem] text-[clamp(0.56rem,0.6cqw,0.72rem)] font-medium leading-[1.18] text-slate-700">
+                              {spec.value.split("\n").map((feature) => (
+                                <li key={feature}>{feature}</li>
+                              ))}
+                            </ul>
+                          </dd>
+                        ) : (
+                          <dd className="mt-[0.28rem] whitespace-pre-line text-[clamp(0.56rem,0.6cqw,0.72rem)] font-medium leading-[1.22] text-slate-700">{spec.value}</dd>
+                        )}
                       </div>
                     </motion.div>
                   ))}
@@ -563,13 +563,13 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
                 {highlightSpec ? (
                   <motion.div
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-auto grid grid-cols-[1.08rem_1fr] gap-x-[0.44cqw] rounded-[0.62rem] px-[0.54cqw] py-[0.62cqh]"
+                    className="mt-auto grid min-h-[4.25rem] grid-cols-[1.32rem_1fr] items-center gap-x-[0.52cqw] rounded-[0.62rem] px-[0.72cqw] py-[0.7cqh]"
                     initial={state.reducedMotion ? false : { opacity: 0, y: 8 }}
                     style={{ backgroundColor: item.soft }}
                     transition={{ duration: 0.46, delay: 0.56 + cardIndex * 0.08, ease: precisionEase }}
                   >
-                    <highlightSpec.Icon aria-hidden="true" className="mt-[0.02rem]" color={item.accent} size={15.5} strokeWidth={1.9} />
-                    <p className="text-[clamp(0.49rem,0.55cqw,0.66rem)] font-semibold leading-[1.22] text-slate-800">
+                    <highlightSpec.Icon aria-hidden="true" color={item.accent} size={18} strokeWidth={1.9} />
+                    <p className="text-[clamp(0.58rem,0.62cqw,0.74rem)] font-semibold leading-[1.2] text-slate-800">
                       <span className="font-semibold text-control-text">{highlightSpec.label}: </span>
                       {highlightSpec.value}
                     </p>
@@ -583,25 +583,25 @@ function ConsolePortfolioStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[9.45cqh] left-[1.75cqw] right-[1.75cqw] grid h-[8.6cqh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
+          className="absolute bottom-[9.45cqh] left-[1.75cqw] right-[1.75cqw] grid h-[12.2cqh] grid-cols-5 overflow-hidden rounded-[0.82rem] border border-white/85 bg-white/78 shadow-[0_1rem_2.65rem_rgb(15_23_42/0.075)] backdrop-blur-xl"
           initial={state.reducedMotion ? false : { opacity: 0, y: 24, scale: 0.985 }}
           transition={{ duration: 0.82, delay: 0.68, ease: popEase }}
         >
           {consoleSupportItems.map((item, index) => (
             <motion.div
               animate={{ opacity: 1, y: 0 }}
-              className={`flex items-center gap-[0.7cqw] px-[1.05cqw] ${index > 0 ? "border-l border-slate-200" : ""}`}
+              className={`flex items-center gap-[0.82cqw] px-[1.15cqw] ${index > 0 ? "border-l border-slate-200" : ""}`}
               initial={state.reducedMotion ? false : { opacity: 0, y: 12 }}
               key={item.title}
               transition={{ duration: 0.58, delay: 0.82 + index * 0.065, ease: precisionEase }}
               whileHover={state.reducedMotion ? undefined : { backgroundColor: item.soft, transition: { duration: 0.24 } }}
             >
-              <span className="grid h-[2.92rem] w-[2.92rem] shrink-0 place-items-center rounded-[0.65rem]" style={{ backgroundColor: item.soft, color: item.accent }}>
-                <item.Icon size={24} strokeWidth={1.8} />
+              <span className="grid h-[3.45rem] w-[3.45rem] shrink-0 place-items-center rounded-[0.75rem]" style={{ backgroundColor: item.soft, color: item.accent }}>
+                <item.Icon size={28} strokeWidth={1.8} />
               </span>
               <div>
-                <h3 className="text-[clamp(0.66rem,0.72cqw,0.86rem)] font-semibold leading-[1.12] text-control-text">{item.title}</h3>
-                <p className="mt-[0.3cqh] text-[clamp(0.55rem,0.61cqw,0.72rem)] leading-[1.32] text-slate-700">{item.detail}</p>
+                <h3 className="text-[clamp(0.86rem,0.88cqw,1.05rem)] font-semibold leading-[1.12] text-control-text">{item.title}</h3>
+                <p className="mt-[0.42cqh] text-[clamp(0.68rem,0.72cqw,0.86rem)] font-medium leading-[1.32] text-slate-700">{item.detail}</p>
               </div>
             </motion.div>
           ))}
@@ -1367,5 +1367,3 @@ function eventForMode(mode: ProductSceneMode) {
       return "product_feature_opened";
   }
 }
-
-

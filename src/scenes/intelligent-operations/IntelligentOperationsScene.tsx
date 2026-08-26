@@ -96,8 +96,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "die-cast-structure",
     number: "01",
-    title: "Die-Cast Structural Components",
-    description: "High-strength die-cast aluminium joints and brackets deliver superior rigidity, precision and ruggedness.",
+    title: "Die-Cast Structural Joints",
+    description: "Precision components reinforce critical structural connections.",
     Icon: Box,
     visual: "joint",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -105,8 +105,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "extruded-frame",
     number: "02",
-    title: "Heavy-Duty Extruded Aluminium Frame",
-    description: "Engineered aluminium profiles provide exceptional strength, light weight and dimensional accuracy.",
+    title: "Heavy-Duty Aluminium Frame",
+    description: "Rigid extruded profiles create a strong structural foundation.",
     Icon: Box,
     visual: "extrusion",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -115,7 +115,7 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
     id: "bolted-construction",
     number: "03",
     title: "Modular Bolted Construction",
-    description: "Bolted assembly enables easy assembly, dismantling, upgrades and relocation.",
+    description: "Enables easier installation, expansion and future reconfiguration.",
     Icon: Wrench,
     visual: "bolted",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -123,8 +123,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "load-bearing-chassis",
     number: "04",
-    title: "High Load-Bearing Structural Chassis",
-    description: "Reinforced chassis and cross-members support heavy equipment, monitors and 24/7 loads.",
+    title: "Reinforced Equipment Support",
+    description: "Engineered to securely support displays and integrated equipment.",
     Icon: Weight,
     visual: "chassis",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -132,8 +132,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "cable-management",
     number: "05",
-    title: "Integrated Structural Cable Management",
-    description: "Horizontal and vertical cable channels separate power, data and AV cables for safety and serviceability.",
+    title: "Integrated Cable Architecture",
+    description: "Dedicated routing keeps power, data and AV organized and accessible.",
     Icon: Cable,
     visual: "cable",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -141,8 +141,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "access-panels",
     number: "06",
-    title: "Tool-Less Removable Access Panels",
-    description: "Quick-release panels allow fast access to power, data and electronics without tools.",
+    title: "Tool-Less Service Access",
+    description: "Quick access to internal equipment simplifies maintenance.",
     Icon: Wrench,
     visual: "panel",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -150,8 +150,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "levelling-system",
     number: "07",
-    title: "Precision Adjustable Levelling System",
-    description: "Heavy-duty levellers compensate for uneven floors and ensure stable console installation.",
+    title: "Precision Levelling System",
+    description: "Adjustable levellers maintain stability on uneven floors.",
     Icon: Settings,
     visual: "leveler",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -159,8 +159,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "monitor-mounting",
     number: "08",
-    title: "Reinforced Monitor Mounting Structure",
-    description: "Dedicated support beams reduce vibration and prevent sag under multi-monitor loads.",
+    title: "Modular Monitor Mounting",
+    description: "Flexible mounting supports changing display configurations.",
     Icon: Monitor,
     visual: "mount",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -168,8 +168,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "edge-protection",
     number: "09",
-    title: "Impact-Resistant Edge & Corner Protection",
-    description: "Aluminium and PU edge components protect high-contact areas while maintaining a clean finish.",
+    title: "Passive Equipment Ventilation",
+    description: "Designed airflow helps dissipate heat from integrated electronics.",
     Icon: ShieldCheck,
     visual: "edge",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -177,8 +177,8 @@ const mechanicalStrengthCards: MechanicalStrengthCard[] = [
   {
     id: "replaceable-parts",
     number: "10",
-    title: "Replaceable Modular Mechanical Parts",
-    description: "High-wear panels, trims, covers, worktops and brackets can be replaced individually.",
+    title: "Replaceable Modular Components",
+    description: "Individual components can be serviced or replaced without rebuilding the console.",
     Icon: Puzzle,
     visual: "parts",
     image: "/assets/products/mechanical-strength/placeholder-image.png",
@@ -189,8 +189,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "adaptive-sit-stand",
     number: "01",
-    title: "Adaptive Sit-Stand Automation",
-    description: "Motorized height adjustment with operator presets and scheduled posture changes.",
+    title: "Adaptive Sit-Stand",
+    description: "Automatically adjusts for healthier working positions.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: SlidersHorizontal,
@@ -200,8 +200,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "ai-desk-assistant",
     number: "02",
-    title: "AI Desk Assistant",
-    description: "Built-in AI assistant provides alerts, SOP guidance, reminders and actionable insights.",
+    title: "AI Operator Assistant",
+    description: "Quick access to information, controls and routine assistance.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Monitor,
@@ -211,8 +211,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "operator-recognition",
     number: "03",
-    title: "Operator Recognition & Auto-Personalization",
-    description: "Identify the operator and restore personalized settings for height, monitors, lighting and applications.",
+    title: "Operator Personalization",
+    description: "Restores individual workspace preferences when an operator signs in.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: UserRound,
@@ -222,8 +222,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "motorized-monitor-positioning",
     number: "04",
-    title: "Motorized Monitor Positioning",
-    description: "Automatically adjusts monitor height, distance, tilt and layout as per operator or task.",
+    title: "Adaptive Display Positioning",
+    description: "Adjusts display position for better viewing and ergonomics.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Monitor,
@@ -233,8 +233,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "intelligent-touch-panel",
     number: "05",
-    title: "Intelligent Touch Control Panel",
-    description: "One interface controls desk, monitors, lighting, AV, communication, power and more.",
+    title: "Unified Touch Control",
+    description: "One interface for frequently used workstation functions.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: SlidersHorizontal,
@@ -244,8 +244,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "voice-controlled-console",
     number: "06",
-    title: "Voice-Controlled Console",
-    description: "Execute commands, retrieve information and control workstation functions hands-free.",
+    title: "Voice-Assisted Control",
+    description: "Hands-free access to supported console functions.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Headphones,
@@ -256,7 +256,7 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
     id: "situational-awareness-lighting",
     number: "07",
     title: "Situational Awareness Lighting",
-    description: "Integrated RGB lighting changes according to alarm severity, events and system conditions.",
+    description: "Visual cues help communicate operational states and events.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Lightbulb,
@@ -266,8 +266,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "operator-wellness",
     number: "08",
-    title: "Operator Wellness & Posture Monitoring",
-    description: "Sensors monitor posture, sitting duration and usage, prompting healthier work habits.",
+    title: "Operator Wellness Monitoring",
+    description: "Supports awareness of posture and prolonged working patterns.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Settings,
@@ -277,8 +277,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "power-device-management",
     number: "09",
-    title: "Smart Power & Device Management",
-    description: "Monitors connected devices, power consumption and abnormal loads or device issues.",
+    title: "Intelligent Device Management",
+    description: "Centralized visibility and control of connected workstation devices.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: Activity,
@@ -288,8 +288,8 @@ const intelligentFeatureCards: IntelligentFeatureCard[] = [
   {
     id: "shift-handover",
     number: "10",
-    title: "Intelligent Shift Handover",
-    description: "Auto-generates shift summaries with alarms, pending actions, notes and critical events.",
+    title: "Digital Shift Handover",
+    description: "Helps transfer operational context between incoming and outgoing teams.",
     accent: "#d51d2a",
     soft: "rgb(213 29 42 / 0.11)",
     Icon: UsersRound,
@@ -312,7 +312,7 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
       <div className="" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.94, 1, 0.96], y: [0, -3, 0] }}
-        className="pointer-events-none absolute left-[29cqw] top-[11.45cqh] h-[20.6cqh] w-[42cqw] overflow-hidden"
+        className="pointer-events-none absolute left-[37.2cqw] top-[11.15cqh] h-[20.3cqh] w-[39cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, ease: "easeInOut", repeat: Infinity }}
       >
@@ -327,42 +327,42 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
           initial={false}
           transition={{ duration: 0.78, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68cqw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Unified Control Room</p>
-          <h1 className="mt-[0.95cqh] text-[clamp(2.08rem,3.22cqw,4.4rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5cqw]">
+          <p className="text-[clamp(0.62rem,0.74cqw,0.9rem)] font-semibold uppercase tracking-[0.5em] text-slate-700">Intelligent Console Ecosystem</p>
+          <h1 className="mt-[0.9cqh] max-w-[38.5cqw] text-[clamp(2.18rem,3.28cqw,4.6rem)] font-bold uppercase leading-[0.93] tracking-normal md:text-[2.58cqw]">
             <span className="block text-control-text">Intelligent by Design.</span>
-            <span className="block text-[#d51d2a]">Smarter by Nature.</span>
+            <span className="block text-[#d51d2a]">Built Around the Operator.</span>
           </h1>
           <div className="mt-[1.05cqh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.92cqh] max-w-[34rem] text-[clamp(0.78rem,0.88cqw,1.02rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8cqw]">
-            Our intelligent console ecosystem is engineered to adapt, assist and elevate every operator, every shift, every day.
+          <p className="mt-[0.92cqh] max-w-[36rem] text-[clamp(0.86rem,0.98cqw,1.12rem)] font-medium leading-[1.32] text-slate-800 md:text-[0.9cqw]">
+            An intelligent console ecosystem that adapts to the operator, simplifies interaction and supports performance throughout every shift.
           </p>
         </motion.aside>
 
         <motion.aside
           animate={{ opacity: 1, x: 0 }}
-          className="absolute right-[0.35cqw] top-[0.35cqh] grid h-[21.8cqh] w-[14.8cqw] content-center gap-[1.15cqh] rounded-[0.85rem] border border-white/80 bg-white/50 p-[0.88cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
+          className="absolute right-[0.35cqw] top-[0.05cqh] grid h-[25.2cqh] w-[17.2cqw] content-center gap-[1.38cqh] rounded-[0.95rem] border border-white/80 bg-white/58 p-[1.08cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.9rem_rgb(15_23_42/0.09)] backdrop-blur-[28px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.08, ease }}
         >
           {[
-            { title: "Adaptive", detail: "Console that adapts to you.", Icon: UserRound },
-            { title: "Aware", detail: "Context-aware. Always aware.", Icon: Activity },
-            { title: "Assists", detail: "AI assistant that thinks with you.", Icon: Headphones },
+            { title: "Adapts", detail: "Personalized around the operator.", Icon: UserRound },
+            { title: "Assists", detail: "Simplifies everyday interaction.", Icon: Headphones },
+            { title: "Responds", detail: "Brings controls and information closer when needed.", Icon: Activity },
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
               <motion.div
                 animate={reducedMotion ? undefined : { opacity: [0.86, 1, 0.9] }}
-                className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62cqw]"
+                className="grid grid-cols-[2.15rem_minmax(0,1fr)] gap-[0.74cqw]"
                 key={item.title}
                 transition={{ duration: 3.2, delay: index * 0.35, repeat: Infinity, ease: "easeInOut" }}
               >
-                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-red-700/16 bg-white/54 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
-                  <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
+                <span className="grid h-[2.15rem] w-[2.15rem] place-items-center rounded-full border border-red-700/16 bg-white/62 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
+                  <Icon aria-hidden="true" size={21} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.58rem,0.66cqw,0.78rem)] font-semibold uppercase tracking-[0.1em] text-[#d51d2a]">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.48rem,0.55cqw,0.64rem)] font-medium leading-[1.2] text-slate-700">{item.detail}</p>
+                  <h2 className="text-[clamp(0.66rem,0.76cqw,0.9rem)] font-semibold uppercase tracking-[0.1em] text-[#d51d2a]">{item.title}</h2>
+                  <p className="mt-0.5 text-[clamp(0.56rem,0.64cqw,0.74rem)] font-medium leading-[1.24] text-slate-700">{item.detail}</p>
                 </div>
               </motion.div>
             );
@@ -382,22 +382,24 @@ function IntelligentFeaturesReferenceStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-[0.1cqw] grid h-[7.3cqh] grid-cols-3 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
+          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-[0.1cqw] grid h-[7.3cqh] grid-cols-3 overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/62 text-control-text shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[26px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
           {[
-            { title: "Designed for 24/7 Operations", detail: "Reliable. Robust. Ready.", Icon: ShieldCheck },
-            { title: "Built Around the Operator", detail: "Comfort. Control. Confidence.", Icon: UserRound },
-            { title: "AI-Powered Intelligence", detail: "Smarter decisions. Better outcomes.", Icon: Activity },
+            { title: "Built for 24/7 Operations", detail: "Reliability for continuous environments.", Icon: ShieldCheck },
+            { title: "Built Around the Operator", detail: "Comfort. Control. Adaptability.", Icon: UserRound },
+            { title: "Intelligence Where It Matters", detail: "Less complexity. Better interaction.", Icon: Activity },
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
-              <div className={`grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.5cqw] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
-                <Icon aria-hidden="true" className="text-white" size={29} strokeWidth={1.6} />
+              <div className={`grid grid-cols-[2.35rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.5cqw] ${index ? "border-l border-slate-200/80" : ""}`} key={item.title}>
+                <span className="grid h-[2.25rem] w-[2.25rem] place-items-center rounded-full bg-red-50 text-[#d51d2a]">
+                  <Icon aria-hidden="true" size={26} strokeWidth={1.65} />
+                </span>
                 <div>
-                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.7cqw]">{item.title}</h2>
-                  <p className="mt-0.5 text-[0.58rem] font-medium leading-[1.22] text-white/88 md:text-[0.55cqw]">{item.detail}</p>
+                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-control-text md:text-[0.7cqw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.58rem] font-medium leading-[1.22] text-slate-700 md:text-[0.55cqw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -467,7 +469,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.6cqh] h-px bg-slate-200/80" />
       <motion.div
         animate={reducedMotion ? undefined : { opacity: [0.92, 1, 0.94], y: [0, -4, 0] }}
-        className="pointer-events-none absolute left-[32cqw] top-[10.85cqh] h-[20.8cqh] w-[42cqw] overflow-hidden"
+        className="pointer-events-none absolute left-[37.2cqw] top-[11.15cqh] h-[20.3cqh] w-[39cqw] overflow-hidden"
         initial={false}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -482,38 +484,38 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
           initial={false}
           transition={{ duration: 0.72, ease }}
         >
-          <p className="text-[clamp(0.58rem,0.68cqw,0.82rem)] font-semibold uppercase tracking-[0.58em] text-slate-700">Engineered to endure. Built to perform.</p>
-          <h1 className="mt-[0.9cqh] text-[clamp(2rem,3.05cqw,4.18rem)] font-bold uppercase leading-[0.94] tracking-normal md:text-[2.5cqw]">
-            <span className="block text-control-text">Mechanical Strength.</span>
-            <span className="block text-[#d51d2a]">Precision in Every Detail.</span>
+          <p className="text-[clamp(0.62rem,0.74cqw,0.9rem)] font-semibold uppercase tracking-[0.5em] text-slate-700">Precision in Every Detail</p>
+          <h1 className="mt-[0.9cqh] max-w-[38.5cqw] text-[clamp(2.18rem,3.28cqw,4.6rem)] font-bold uppercase leading-[0.93] tracking-normal md:text-[2.58cqw]">
+            <span className="block text-control-text">Engineered for 24/7.</span>
+            <span className="block text-[#d51d2a]">Built to Endure.</span>
           </h1>
           <div className="mt-[1.35cqh] h-[3px] w-[3.3rem] bg-control-warm" />
-          <p className="mt-[0.9cqh] max-w-[34rem] text-[clamp(0.76rem,0.86cqw,1rem)] font-medium leading-[1.3] text-slate-800 md:text-[0.8cqw]">
-            Every component is engineered for rugged performance, ease of assembly and long-term reliability in 24/7 mission-critical control rooms.
+          <p className="mt-[0.9cqh] max-w-[36rem] text-[clamp(0.86rem,0.98cqw,1.12rem)] font-medium leading-[1.32] text-slate-800 md:text-[0.9cqw]">
+            From the structural frame to service access, every component is engineered for strength, stability and long-term maintainability.
           </p>
         </motion.aside>
 
         <motion.aside
           animate={{ opacity: 1, x: 0 }}
-          className="absolute right-[0.35cqw] top-[0.15cqh] grid h-[22.45cqh] w-[18.2cqw] content-center gap-[0.92cqh] rounded-[0.85rem] border border-white/80 bg-white/52 p-[0.95cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.7rem_rgb(15_23_42/0.08)] backdrop-blur-[28px]"
+          className="absolute right-[0.35cqw] top-[0.05cqh] grid h-[25.6cqh] w-[19.2cqw] content-center gap-[1.08cqh] rounded-[0.95rem] border border-white/80 bg-white/58 p-[1.12cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_1rem_2.9rem_rgb(15_23_42/0.09)] backdrop-blur-[28px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.08, ease }}
         >
           {[
-            { title: "Rugged & Reliable", detail: "Built for 24/7 operations in demanding environments.", Icon: ShieldCheck },
-            { title: "Easy to Service", detail: "Tool-less access and modular design for quick maintenance.", Icon: Wrench },
-            { title: "Modular & Scalable", detail: "Configure, expand and reconfigure as needs evolve.", Icon: Box },
-            { title: "Engineered to Last", detail: "Premium materials and precision engineering for long life.", Icon: Settings },
+            { title: "Rugged", detail: "Engineered for continuous mission-critical operation.", Icon: ShieldCheck },
+            { title: "Serviceable", detail: "Fast access to equipment, cabling and internal components.", Icon: Wrench },
+            { title: "Modular", detail: "Expand, reconfigure and upgrade as requirements change.", Icon: Box },
+            { title: "Precise", detail: "Engineered components for consistent fit, alignment and stability.", Icon: Settings },
           ].map((item) => {
             const Icon = item.Icon;
             return (
-              <div className="grid grid-cols-[1.85rem_minmax(0,1fr)] gap-[0.62cqw]" key={item.title}>
-                <span className="grid h-[1.85rem] w-[1.85rem] place-items-center rounded-full border border-red-700/16 bg-white/54 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
-                  <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
+              <div className="grid grid-cols-[2.28rem_minmax(0,1fr)] gap-[0.78cqw]" key={item.title}>
+                <span className="grid h-[2.28rem] w-[2.28rem] place-items-center rounded-full border border-red-700/16 bg-white/62 text-[#d51d2a] shadow-[inset_0_1px_0_rgb(255_255_255/0.95),0_0.55rem_1.2rem_rgb(15_23_42/0.06)]">
+                  <Icon aria-hidden="true" size={22} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h2 className="text-[clamp(0.56rem,0.64cqw,0.76rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h2>
-                  <p className="mt-0.5 text-[clamp(0.47rem,0.54cqw,0.63rem)] font-medium leading-[1.22] text-slate-700">{item.detail}</p>
+                  <h2 className="text-[clamp(0.72rem,0.82cqw,0.96rem)] font-semibold uppercase leading-tight text-control-text">{item.title}</h2>
+                  <p className="mt-0.5 text-[clamp(0.62rem,0.7cqw,0.8rem)] font-medium leading-[1.24] text-slate-700">{item.detail}</p>
                 </div>
               </div>
             );
@@ -522,7 +524,7 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-0 top-[31cqh] bottom-[10.65cqh] grid grid-cols-5 grid-rows-2 gap-x-[0.78cqw] gap-y-[1.18cqh]"
+          className="absolute inset-x-[0.1cqw] top-[27.4cqh] bottom-[11.75cqh] grid grid-cols-5 grid-rows-2 gap-x-[0.78cqw] gap-y-[1.18cqh]"
           initial={false}
           transition={{ duration: 0.82, delay: 0.16, ease }}
         >
@@ -533,24 +535,26 @@ function MechanicalStrengthConsoleStage({ chapter }: { chapter: Chapter }) {
 
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-0 grid grid-cols-5 overflow-hidden rounded-[0.72rem] border border-white/18 bg-[linear-gradient(135deg,#9f101b,#d51d2a)] text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.22),0_1rem_2.4rem_rgb(213_29_42/0.18)]"
+          className="absolute bottom-[0.35cqh] left-[19.6cqw] right-[0.1cqw] grid h-[8.45cqh] grid-cols-5 overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/62 text-control-text shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.5rem_rgb(15_23_42/0.1)] backdrop-blur-[26px]"
           initial={false}
           transition={{ duration: 0.72, delay: 0.38, ease }}
         >
           {[
-            { title: "Built for 24/7", detail: "Tested for continuous mission-critical operations.", Icon: ShieldCheck },
-            { title: "Premium Materials", detail: "High-grade aluminium, steel and engineered components.", Icon: ThumbsUp },
-            { title: "Precision Engineered", detail: "Manufactured with tight tolerances for perfect fit.", Icon: Settings },
-            { title: "Service Friendly", detail: "Designed for quick maintenance and minimal downtime.", Icon: Wrench },
-            { title: "Sustainable Design", detail: "Long life, modular replacement and recyclable materials.", Icon: Recycle },
+            { title: "24/7 Ready", detail: "Built for continuous operations.", Icon: ShieldCheck },
+            { title: "High Stability", detail: "Rigid structural architecture.", Icon: ThumbsUp },
+            { title: "Faster Service", detail: "Easy equipment and cable access.", Icon: Wrench },
+            { title: "Future Adaptable", detail: "Designed for upgrades and reconfiguration.", Icon: Settings },
+            { title: "Longer Lifecycle", detail: "Serviceable and replaceable components.", Icon: Recycle },
           ].map((item, index) => {
             const Icon = item.Icon;
             return (
-              <div className={`grid grid-cols-[2.25rem_minmax(0,1fr)] items-center gap-[0.85cqw] px-[1.15cqw] py-[1.05cqh] ${index ? "border-l border-white/28" : ""}`} key={item.title}>
-                <Icon aria-hidden="true" className="text-white" size={28} strokeWidth={1.6} />
+              <div className={`grid grid-cols-[2.5rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.2cqw] py-[1.05cqh] ${index ? "border-l border-slate-200/80" : ""}`} key={item.title}>
+                <span className="grid h-[2.42rem] w-[2.42rem] place-items-center rounded-full bg-red-50 text-[#d51d2a]">
+                  <Icon aria-hidden="true" size={27} strokeWidth={1.65} />
+                </span>
                 <div>
-                  <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] md:text-[0.58cqw]">{item.title}</h2>
-                  <p className="mt-0.5 text-[0.56rem] font-medium leading-[1.2] text-white/86 md:text-[0.52cqw]">{item.detail}</p>
+                  <h2 className="text-[0.76rem] font-semibold uppercase tracking-[0.08em] text-control-text md:text-[0.64cqw]">{item.title}</h2>
+                  <p className="mt-0.5 text-[0.62rem] font-medium leading-[1.2] text-slate-700 md:text-[0.56cqw]">{item.detail}</p>
                 </div>
               </div>
             );
@@ -602,20 +606,23 @@ function MechanicalStrengthCard({ item, index, reducedMotion }: { item: Mechanic
   return (
     <motion.article
       animate={{ opacity: 1, y: 0 }}
-      className="group relative min-h-0 overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/48 shadow-[inset_0_1px_0_rgb(255_255_255/0.96),inset_0_-1px_0_rgb(148_163_184/0.14),0_0.95rem_2.2rem_rgb(15_23_42/0.09)] backdrop-blur-[30px]"
+      className="group relative flex min-h-0 flex-col overflow-hidden rounded-[0.78rem] border border-white/82 bg-white/48 p-[0.54cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),inset_0_-1px_0_rgb(148_163_184/0.14),0_0.95rem_2.2rem_rgb(15_23_42/0.09)] backdrop-blur-[30px]"
       initial={false}
       transition={{ duration: 0.62, delay: 0.02 * index, ease: [0.16, 1, 0.3, 1] }}
     >
       <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgb(255_255_255/0.84),rgb(255_255_255/0.38)_48%,rgb(232_238_245/0.5))]" />
       <span className="pointer-events-none absolute -right-[18%] -top-[30%] h-[6rem] w-[6rem] rounded-full bg-white/48 blur-2xl" />
-      <div className="relative z-10 grid h-[35%] grid-cols-[minmax(0,1fr)_1.8rem] gap-[0.48cqw] px-[0.58cqw] py-[0.88cqh] pl-[2.9rem]">
-        <span className="absolute left-0 top-0 grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72cqw,0.82rem)] font-semibold leading-none text-white">{item.number}</span>
+      <div className="relative z-10 grid min-h-[7.35cqh] grid-cols-[minmax(0,1fr)_2.05rem] items-start gap-[0.5cqw] pl-[2.9rem]">
+        <span className="absolute left-[-0.54cqw] top-[-0.54cqw] grid h-[1.72rem] min-w-[2.38rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.74rem,0.82cqw,0.94rem)] font-semibold leading-none text-white">{item.number}</span>
         <div className="min-w-0">
-          <h2 className="text-[clamp(0.52rem,0.6cqw,0.72rem)] font-semibold uppercase leading-[1.08] text-control-text">{item.title}</h2>
+          <h2 className="max-w-[15rem] text-[clamp(0.66rem,0.73cqw,0.86rem)] font-semibold uppercase leading-[1.06] text-control-text">{item.title}</h2>
+          <p className="mt-[0.52cqh] max-w-[15.8rem] text-[clamp(0.55rem,0.62cqw,0.72rem)] font-medium leading-[1.18] text-slate-700">{item.description}</p>
         </div>
-        <Icon aria-hidden="true" className="mt-0.5 text-slate-900/72" size={21} strokeWidth={1.65} />
+        <span className="grid h-[2.05rem] w-[2.05rem] shrink-0 place-items-center rounded-full border border-slate-300/62 bg-white/62 text-slate-900/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.4rem_0.9rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+          <Icon aria-hidden="true" size={20} strokeWidth={1.75} />
+        </span>
       </div>
-      <div className="relative z-10 h-[65%] overflow-hidden rounded-b-[0.76rem] bg-[linear-gradient(135deg,#eef2f6,#ffffff)]">
+      <div className="relative z-10 mx-[-0.54cqw] mb-[-0.54cqw] mt-auto h-[12.45cqh] shrink-0 overflow-hidden rounded-b-[0.78rem] border-t border-slate-200/72 bg-[linear-gradient(135deg,#eef2f6,#ffffff)] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.72rem_1.45rem_rgb(15_23_42/0.11)]">
         {imageVisual}
         {!item.image ? <div className="absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.08),rgb(15_23_42/0.16))]" /> : null}
         {!item.image ? <MechanicalStrengthVisual visual={item.visual} reducedMotion={reducedMotion} /> : null}
@@ -1043,12 +1050,12 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
       <span className="pointer-events-none absolute inset-x-[0.55rem] top-0 h-px bg-white/90" />
       <span className="pointer-events-none absolute -right-[18%] -top-[32%] h-[6rem] w-[6rem] rounded-full bg-white/42 blur-2xl" />
 
-      <header className="relative z-10 grid min-h-[4.6cqh] grid-cols-[minmax(0,1fr)_1.82rem] items-start gap-[0.46cqw] pl-[2.8rem]">
-        <span className="absolute left-[-0.54cqw] top-[-0.54cqw] grid h-[1.55rem] min-w-[2.15rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.64rem,0.72cqw,0.82rem)] font-semibold leading-none tracking-normal text-white">
+      <header className="relative z-10 grid min-h-[6.55cqh] grid-cols-[minmax(0,1fr)_1.82rem] items-start gap-[0.46cqw] pl-[2.8rem]">
+        <span className="absolute left-[-0.54cqw] top-[-0.54cqw] grid h-[1.65rem] min-w-[2.28rem] place-items-center rounded-br-md rounded-tl-[0.78rem] bg-control-warm px-2 text-[clamp(0.7rem,0.78cqw,0.9rem)] font-semibold leading-none tracking-normal text-white">
           {feature.number}
         </span>
         <div className="min-w-0 pt-[0.02rem]">
-          <h2 className="max-w-[13rem] text-[clamp(0.52rem,0.59cqw,0.7rem)] font-semibold uppercase leading-[1.08] tracking-normal text-control-text">
+          <h2 className="max-w-[14.4rem] text-[clamp(0.62rem,0.69cqw,0.82rem)] font-semibold uppercase leading-[1.07] tracking-normal text-control-text">
             {titleParts.length > 3 ? (
               <>
                 <span className="block">{titleParts.slice(0, Math.ceil(titleParts.length / 2)).join(" ")}</span>
@@ -1058,9 +1065,12 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
               feature.title
             )}
           </h2>
+          <p className="mt-[0.52cqh] max-w-[15.5rem] text-[clamp(0.54rem,0.61cqw,0.72rem)] font-medium leading-[1.2] text-slate-700">
+            {feature.description}
+          </p>
         </div>
-        <span className="grid h-[1.76rem] w-[1.76rem] shrink-0 place-items-center rounded-full border border-slate-300/62 bg-white/56 text-slate-900/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.4rem_0.9rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
-          <Icon aria-hidden="true" size={18} strokeWidth={1.75} />
+        <span className="grid h-[1.92rem] w-[1.92rem] shrink-0 place-items-center rounded-full border border-slate-300/62 bg-white/62 text-slate-900/76 shadow-[inset_0_1px_0_rgb(255_255_255/0.92),0_0.4rem_0.9rem_rgb(15_23_42/0.08)] backdrop-blur-xl">
+          <Icon aria-hidden="true" size={19} strokeWidth={1.75} />
         </span>
       </header>
 
@@ -1076,8 +1086,9 @@ function FeatureCard({ feature, index, reducedMotion }: { feature: IntelligentFe
 function FeatureVisual({ feature, reducedMotion }: { feature: IntelligentFeatureCard; reducedMotion: boolean }) {
   if (feature.image) {
     return (
-      <div className="relative z-10 h-[15.4cqh] shrink-0 overflow-hidden rounded-[0.58rem] border border-white/54 bg-[linear-gradient(135deg,#101820,#27313b)] shadow-[inset_0_1px_0_rgb(255_255_255/0.16),0_0.62rem_1.35rem_rgb(15_23_42/0.09)]">
-        <img alt="" className="h-full w-full object-cover" src={feature.image} />
+      <div className="relative z-10 mx-[-0.54cqw] mb-[-0.54cqw] mt-auto h-[13.4cqh] shrink-0 overflow-hidden rounded-b-[0.78rem] border-t border-slate-200/72 bg-[linear-gradient(135deg,#f8fafc,#e8eef5)] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_0.72rem_1.45rem_rgb(15_23_42/0.11)]">
+        <img alt="" className="h-full w-full rounded-b-[0.72rem] object-cover shadow-[0_0.45rem_1rem_rgb(15_23_42/0.14)]" src={feature.image} />
+        <div className="pointer-events-none absolute inset-0 rounded-b-[0.72rem] bg-[linear-gradient(180deg,rgb(255_255_255/0.04),rgb(15_23_42/0.08))]" />
       </div>
     );
   }

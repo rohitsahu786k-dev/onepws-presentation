@@ -6,13 +6,13 @@ import { PrecisionButton } from "../../design-system/components/InteractionCues"
 import { AmbientLayer, SceneCanvas, SafeArea, StructuralLayer } from "../../design-system/components/ScenePrimitives";
 import { usePerformanceMode } from "../../design-system/usePerformanceMode";
 import { usePresentation } from "../../state/PresentationProvider";
-import { ArchitecturalSystemsReferenceScene } from "./ArchitecturalSystemsReferenceScene";
+import { ArchitecturalSystemsReferenceScene, architecturalSystemChapterIds } from "./ArchitecturalSystemsReferenceScene";
 import { recordRoomExperienceEvent } from "./roomAnalytics";
 import { getRoomExperience, type RoomExperience, type RoomLayer, type RoomLayerMode } from "./roomExperienceConfig";
 import { roomNarration } from "./roomNarration";
 
 export function RoomExperienceScene({ chapter, fallback }: { chapter: Chapter; fallback: ReactNode }) {
-  if (chapter.id === "architectural-systems") {
+  if (chapter.id === "architectural-systems" || architecturalSystemChapterIds.includes(chapter.id as (typeof architecturalSystemChapterIds)[number])) {
     return <ArchitecturalSystemsReferenceScene chapter={chapter} />;
   }
 

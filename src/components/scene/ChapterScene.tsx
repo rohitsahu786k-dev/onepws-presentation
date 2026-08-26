@@ -23,6 +23,7 @@ import { RoomSoundsRightChapter } from "./RoomSoundsRightChapter";
 import { SystemDrivenExecutionChapter } from "./SystemDrivenExecutionChapter";
 import { UnifiedControlRoomChapter } from "./UnifiedControlRoomChapter";
 import { WhyOnePwsChapter } from "./WhyOnePwsChapter";
+import { ArchitecturalSystemsReferenceScene, architecturalSystemChapterIds } from "../../scenes/room-experience/ArchitecturalSystemsReferenceScene";
 
 const sceneImageByChapterId: Record<string, string> = {
   "mission-critical-environments": "ambient-control-room",
@@ -68,6 +69,7 @@ export function ChapterScene({ chapter }: Props) {
   const voiceover = useVoiceover();
   const chapterVoiceover = getVoiceover("chapter", chapter.id);
   const motionDuration = state.reducedMotion ? 0.01 : 0.72;
+  const isOnePwsPositioning = chapter.id === "onepws-positioning";
 
   if (chapter.id === "complete-ecosystem") {
     return <ConnectedIntelligenceChapter chapter={chapter} />;
@@ -133,6 +135,10 @@ export function ChapterScene({ chapter }: Props) {
     return <UnifiedControlRoomChapter chapter={chapter} />;
   }
 
+  if (chapter.id === "architectural-systems" || architecturalSystemChapterIds.includes(chapter.id as (typeof architecturalSystemChapterIds)[number])) {
+    return <ArchitecturalSystemsReferenceScene chapter={chapter} />;
+  }
+
   if (chapter.id === "next-steps-closing") {
     return <ClosingChapter chapter={chapter} />;
   }
@@ -161,7 +167,7 @@ export function ChapterScene({ chapter }: Props) {
           </motion.h1>
           <motion.p
             animate={{ opacity: 1, y: 0 }}
-            className="scene-support mt-7 max-w-3xl text-control-soft"
+            className={`scene-support mt-7 max-w-3xl text-control-soft ${isOnePwsPositioning ? "!text-[clamp(1.12rem,1.2cqw,1.42rem)] !leading-[1.48]" : ""}`}
             initial={false}
             transition={{ duration: motionDuration, delay: 0.2 }}
           >
@@ -234,22 +240,24 @@ export function ChapterScene({ chapter }: Props) {
           transition={{ duration: motionDuration, delay: 0.18 }}
         >
           <div className="overflow-hidden border border-control-line bg-white shadow-control">
-            <SceneImage chapter={chapter} />
+            <SceneImage chapter={chapter} compactVertical={isOnePwsPositioning} />
           </div>
-          <div className="mt-5 grid grid-cols-3 gap-2">
+          <div className={`${isOnePwsPositioning ? "mt-4" : "mt-5"} grid grid-cols-3 gap-2`}>
             {chapter.beats.map((beat, index) => (
               <div
-                className="border-l-2 border-control-warm/70 bg-white/70 py-3 pl-3 pr-2"
+                className={`border-l-2 border-control-warm/70 bg-white/70 ${
+                  isOnePwsPositioning ? "min-h-[7.2rem] py-5 pl-5 pr-4" : "py-3 pl-3 pr-2"
+                }`}
                 key={beat.id}
               >
-                <span className="text-xs font-semibold text-control-muted">
+                <span className={`${isOnePwsPositioning ? "text-sm" : "text-xs"} font-semibold text-control-muted`}>
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-1 text-sm font-semibold leading-snug text-control-text">
+                <p className={`mt-1 font-semibold leading-snug text-control-text ${isOnePwsPositioning ? "text-xl" : "text-sm"}`}>
                   {beat.label}
                 </p>
                 {beat.supportingLabel ? (
-                  <p className="mt-1 text-xs italic leading-snug text-control-muted">
+                  <p className={`mt-1 italic leading-snug text-control-muted ${isOnePwsPositioning ? "text-base" : "text-xs"}`}>
                     {beat.supportingLabel}
                   </p>
                 ) : null}
@@ -263,11 +271,11 @@ export function ChapterScene({ chapter }: Props) {
   );
 }
 
-function SceneImage({ chapter }: { chapter: Chapter }) {
+function SceneImage({ chapter, compactVertical = false }: { chapter: Chapter; compactVertical?: boolean }) {
   const asset = getAsset(chapter.media?.fallbackImageAssetId ?? sceneImageByChapterId[chapter.id] ?? "ambient-control-room");
 
   return (
-    <figure className="relative aspect-[16/10] bg-control-panel">
+    <figure className={`relative bg-control-panel ${compactVertical ? "aspect-[16/8]" : "aspect-[16/10]"}`}>
       {asset?.src ? (
         <img
           alt={asset.alt ?? chapter.visualNote}
@@ -319,4 +327,3 @@ function SceneArchitecture({ chapter }: { chapter: Chapter }) {
     </div>
   );
 }
-

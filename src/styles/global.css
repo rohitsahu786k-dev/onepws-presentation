@@ -723,42 +723,46 @@ button:focus-visible {
 
 .pws-mission-critical-beats {
   display: grid;
-  width: min(44rem, 68cqw);
+  width: min(60rem, 78cqw);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.65rem;
-  margin-top: clamp(1.2rem, 2.1cqw, 2.2rem);
+  gap: 0.9rem;
+  margin-top: clamp(1.4rem, 2.3cqw, 2.5rem);
 }
 
 .pws-mission-critical-beat {
   display: grid;
-  min-height: 6rem;
+  min-height: 8.3rem;
   align-content: start;
-  gap: 0.18rem;
+  gap: 0.34rem;
   border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: 0.95rem;
   background: rgb(0 0 0 / 0.18);
   color: #ffffff;
-  padding: 0.85rem 1rem 0.95rem;
+  padding: 1.05rem 1.15rem 1.2rem;
   text-align: left;
+  box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 0.2);
   backdrop-filter: blur(12px);
 }
 
 .pws-mission-critical-beat-index {
   display: block;
   color: rgb(255 255 255 / 0.46);
-  font-size: 0.72rem;
+  font-size: clamp(0.78rem, 0.72cqw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .pws-mission-critical-beat strong {
   color: #ffffff;
-  font-size: clamp(1.05rem, 1.25cqw, 1.35rem);
+  font-size: clamp(1.28rem, 1.42cqw, 1.72rem);
   font-weight: 650;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
 .pws-mission-critical-beat small {
   color: rgb(255 255 255 / 0.72);
-  font-size: clamp(0.72rem, 0.78cqw, 0.88rem);
-  line-height: 1.25;
+  font-size: clamp(0.9rem, 0.88cqw, 1.08rem);
+  line-height: 1.28;
 }
 
 .pws-opening-awakening {

@@ -142,10 +142,20 @@ const consoleDetailSequence: ChapterId[] = [
   "console-detail-collab",
 ];
 
+const architecturalSystemsSequence: ChapterId[] = [
+  "architectural-lighting-systems",
+  "architectural-hvac-systems",
+  "architectural-acoustic-systems",
+  "architectural-power-systems",
+  "architectural-structured-cabling",
+  "architectural-security-systems",
+  "architectural-fire-safety-systems",
+];
+
 export const navigationJourneys: NavigationJourney[] = [
   {
     id: "complete-story",
-    name: "Complete OnePWS control-room story",
+    name: "Your OnePWS control room experience",
     type: "guided",
     audienceOrOutcome: "Presenter-led complete journey",
     durationLabel: "24 min",
@@ -162,7 +172,7 @@ export const navigationJourneys: NavigationJourney[] = [
       "console-portfolio",
       "intelligent-features",
       "mechanical-strength-console",
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "room-sounds-right",
       "room-built-to-protect",
       "room-engineered-to-last",
@@ -228,7 +238,7 @@ export const navigationJourneys: NavigationJourney[] = [
     sequence: [
       "human-centred-philosophy",
       "sightline-comfort",
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "design-build-approach",
       ...verifiedProjectCredentialsSequence,
       "next-steps-closing",
@@ -257,7 +267,7 @@ export const navigationJourneys: NavigationJourney[] = [
       "complete-ecosystem",
       "intelligent-features",
       "incident-response",
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "why-onepws",
       "next-steps-closing",
       "logo-finale",
@@ -359,7 +369,7 @@ export const navigationJourneys: NavigationJourney[] = [
     durationLabel: "4-6 min",
     estimatedDurationMs: 6 * 60_000,
     sequence: [
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "complete-ecosystem",
       "console-portfolio",
       ...consoleDetailSequence,
@@ -371,7 +381,7 @@ export const navigationJourneys: NavigationJourney[] = [
     ],
     optionalBranches: ["architecture-room-envelope", "architecture-product-context"],
     memoryMoments: ["complete-ecosystem"],
-    openingDestination: "architectural-systems",
+    openingDestination: "architectural-lighting-systems",
     closingDestination: "why-onepws",
     defaultNavigationVisibility: "visible",
     narrationRecommended: false,
@@ -475,7 +485,7 @@ export const navigationJourneys: NavigationJourney[] = [
       "room-built-to-protect",
       "room-engineered-to-last",
       "unified-control-room",
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "intelligent-features",
       "delivery-methodology",
       "manufacturing-quality",
@@ -511,7 +521,7 @@ export const navigationJourneys: NavigationJourney[] = [
       "room-built-to-protect",
       "room-engineered-to-last",
       "unified-control-room",
-      "architectural-systems",
+      ...architecturalSystemsSequence,
       "intelligent-features",
       ...verifiedProjectCredentialsSequence,
       "why-onepws",
@@ -574,7 +584,7 @@ export const timeBasedRoutes = [
 export const navigationMapGroups: NavigationMapGroup[] = [
   { id: "opening", title: "Opening", description: "Product ecosystem, system awakening and journey entry.", chapterIds: ["presentation-flow-selector", "products-transforming-spaces", "opening-cover", "journey-roadmap"], position: { x: 10, y: 48 }, theme: "cinematic" },
   { id: "human-performance", title: "Human performance", description: "Operator pressure, fatigue, ergonomics and decision support.", chapterIds: ["mission-critical-environments", "operator-challenges", "poor-design-risk", "human-centred-philosophy", "sightline-comfort"], position: { x: 28, y: 24 }, theme: "human" },
-  { id: "environment", title: "Control room environment", description: "The connected room ecosystem, architecture and spatial systems.", chapterIds: ["complete-ecosystem", "architectural-systems"], position: { x: 50, y: 28 }, theme: "technology" },
+  { id: "environment", title: "Control room environment", description: "The connected room ecosystem, architecture and spatial systems.", chapterIds: ["complete-ecosystem", ...architecturalSystemsSequence], position: { x: 50, y: 28 }, theme: "technology" },
   { id: "workstations", title: "Workstations and consoles", description: "Console portfolio, acoustics, fire safety, durability, modular room systems and intelligent feature layers.", chapterIds: ["console-portfolio", "console-detail-edge", "console-detail-linear", "console-detail-vista", "console-detail-elevate", "console-detail-collab", "room-sounds-right", "room-built-to-protect", "room-engineered-to-last", "unified-control-room", "intelligent-features", "mechanical-strength-console"], position: { x: 76, y: 28 }, theme: "product" },
   { id: "technology", title: "Intelligence expansion", description: "Personalization, proactive information, whole-room response, digital twin and AI layers.", chapterIds: ["room-recognizes-you", "console-understands-task", "information-comes-operator", "operational-state-room-responds", "room-protects-human-performance", "personal-workspace", "intelligence-beyond-desk", "digital-twin-control-room", "ai-silent-assistant", "software-defined-control-room"], position: { x: 82, y: 52 }, theme: "technology" },
   { id: "engineering", title: "Design and engineering", description: "Ergonomic study, delivery methodology and design-build execution.", chapterIds: ["ergonomic-methodology", "design-build-approach", "delivery-methodology"], position: { x: 34, y: 68 }, theme: "human" },
@@ -594,7 +604,7 @@ export const optionalBranches: OptionalBranch[] = [
   { id: "ergonomic-evidence", title: "View the operator impact", value: "Adds ergonomic evidence and sightline detail.", parentChapterId: "human-centred-philosophy", destinationChapterId: "sightline-comfort", returnDestination: "complete-ecosystem", additionalDurationMs: 3 * 60_000, autoplaySkippable: true },
   { id: "product-operator-relationship", title: "View operator relationship", value: "Shows reach, sightline and posture relationship around the workstation.", parentChapterId: "console-portfolio", destinationChapterId: "sightline-comfort", returnDestination: "console-portfolio", additionalDurationMs: 2 * 60_000, autoplaySkippable: true },
   { id: "product-room-context", title: "See product in the room", value: "Pulls back from the console to the complete control-room environment.", parentChapterId: "console-portfolio", destinationChapterId: "complete-ecosystem", returnDestination: "intelligent-features", additionalDurationMs: 3 * 60_000, autoplaySkippable: true },
-  { id: "architecture-room-envelope", title: "Explore the room envelope", value: "Shows wall, ceiling, floor, lighting, acoustic and material layers before returning to the architectural route.", parentChapterId: "architectural-systems", destinationChapterId: "complete-ecosystem", returnDestination: "complete-ecosystem", additionalDurationMs: 3 * 60_000, autoplaySkippable: true },
+  { id: "architecture-room-envelope", title: "Explore the room envelope", value: "Shows wall, ceiling, floor, lighting, acoustic and material layers before returning to the architectural route.", parentChapterId: "architectural-lighting-systems", destinationChapterId: "complete-ecosystem", returnDestination: "complete-ecosystem", additionalDurationMs: 3 * 60_000, autoplaySkippable: true },
   { id: "architecture-product-context", title: "Connect architecture to consoles", value: "Relates the completed room environment to workstation and console placement.", parentChapterId: "complete-ecosystem", destinationChapterId: "console-portfolio", returnDestination: "why-onepws", additionalDurationMs: 2 * 60_000, autoplaySkippable: true },
   { id: "intelligent-incident-scenario", title: "Run the response scenario", value: "Moves from intelligent feature layers into the conceptual incident-response sequence.", parentChapterId: "intelligent-features", destinationChapterId: "incident-response", returnDestination: "complete-ecosystem", additionalDurationMs: 4 * 60_000, autoplaySkippable: true },
   { id: "intelligent-room-context", title: "See the connected room", value: "Pulls back from intelligent operations to the physical room systems that support response.", parentChapterId: "incident-response", destinationChapterId: "complete-ecosystem", returnDestination: "why-onepws", additionalDurationMs: 3 * 60_000, autoplaySkippable: true },

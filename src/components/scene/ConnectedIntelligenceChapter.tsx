@@ -52,55 +52,55 @@ export function ConnectedIntelligenceChapter({ chapter }: Props) {
 const advancedCapabilities = [
   {
     title: "Unified Visualization",
-    body: "One operating picture across workstation displays, video wall and shared views.",
+    body: "Critical information brought together in one operational view.",
     icon: MonitorCog,
     color: "text-red-600",
   },
   {
     title: "AI-Powered Insights",
-    body: "Patterns, anomalies and summaries surface only where the workflow needs them.",
+    body: "AI surfaces patterns, anomalies and information that needs attention.",
     icon: Brain,
     color: "text-blue-600",
   },
   {
-    title: "Collaboration at Speed",
-    body: "Event context travels with the handoff so teams work from the same facts.",
+    title: "Faster Collaboration",
+    body: "Teams share the same context for faster coordination.",
     icon: Network,
     color: "text-cyan-600",
   },
   {
     title: "Ergonomic Excellence",
-    body: "Sightlines, reach, posture and comfort are planned as operating requirements.",
+    body: "Sightlines, reach, posture and comfort designed around the operator.",
     icon: CircleUserRound,
     color: "text-violet-600",
   },
   {
     title: "Built to Protect",
-    body: "Access, redundancy, fire safety and compliance sit inside the room architecture.",
+    body: "Safety, redundancy and compliance engineered into the environment.",
     icon: ShieldCheck,
     color: "text-orange-600",
   },
   {
     title: "Sustainable by Design",
-    body: "Energy and material choices are handled as lifecycle design decisions.",
+    body: "Materials and systems selected for efficiency and lifecycle performance.",
     icon: Leaf,
     color: "text-green-600",
   },
   {
     title: "Continuous Intelligence",
-    body: "Room-state data becomes feedback for tuning layouts, workflows and support.",
+    body: "Operational data helps improve layouts, workflows and performance.",
     icon: TrendingUp,
     color: "text-blue-600",
   },
   {
     title: "Predictive Maintenance",
-    body: "Asset health and service signals are visible before support becomes urgent.",
+    body: "Identify equipment and service needs before they disrupt operations.",
     icon: CloudCog,
     color: "text-cyan-600",
   },
   {
     title: "Digital Twin Ready",
-    body: "Proposed changes can be modeled before they affect the live room.",
+    body: "Model and evaluate changes before implementing them in the live room.",
     icon: Maximize2,
     color: "text-violet-600",
   },
@@ -109,25 +109,25 @@ const advancedCapabilities = [
 const impactItems = [
   {
     title: "Operator First",
-    body: "Built around the people who make the decisions.",
+    body: "Designed around the people making critical decisions.",
     icon: Target,
     color: "text-blue-600",
   },
   {
     title: "Mission Focused",
-    body: "Designed for reliability, performance and uptime.",
+    body: "Engineered for reliability and operational performance.",
     icon: ShieldCheck,
     color: "text-green-600",
   },
   {
     title: "Future Ready",
-    body: "Software-defined. Always evolving.",
+    body: "Built to adapt as technology and requirements evolve.",
     icon: Rocket,
     color: "text-violet-600",
   },
   {
-    title: "Impact Driven",
-    body: "Clearer state. Cleaner handoffs.",
+    title: "Performance Driven",
+    body: "Designed to improve awareness, coordination and response.",
     icon: Globe2,
     color: "text-cyan-600",
   },
@@ -177,9 +177,9 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
                 </span>
               </h1>
               <div className="mt-3 h-[3px] w-16 rounded-full bg-red-600" />
-              <p className="mt-3 max-w-[42rem] text-[clamp(0.86rem,0.88cqw,1rem)] font-medium leading-[1.55] text-slate-800 md:text-[0.8cqw]">
-                A control-room environment where consoles, architecture, systems and intelligence share one
-                operating context around the people doing the work.
+              <p className="mt-3 max-w-[42rem] text-[clamp(1rem,0.98cqw,1.16rem)] font-medium leading-[1.5] text-slate-800">
+                Consoles, interiors, technology and intelligence working together as one connected
+                control-room environment.
               </p>
             </motion.div>
 
@@ -226,7 +226,7 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
 
           <section className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)]">
             <motion.div animate={{ opacity: 1, y: 0 }} initial={false} transition={{ duration: motionDuration, delay: 0.1 }}>
-              <h2 className="text-[clamp(1rem,1.18cqw,1.34rem)] font-semibold leading-none text-slate-950">Most Advanced Capabilities</h2>
+              <h2 className="text-[clamp(1.12rem,1.28cqw,1.48rem)] font-semibold leading-none text-slate-950">Intelligent Control Room Capabilities</h2>
               <div className="mt-2 h-[3px] w-14 rounded-full bg-red-600" />
             </motion.div>
             <div className="mt-2 grid min-h-0 grid-cols-3 grid-rows-3 gap-3">
@@ -251,8 +251,8 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
                   >
                     <capability.icon aria-hidden="true" className={`mx-auto shrink-0 ${capability.color}`} size={38} strokeWidth={1.8} />
                   </motion.span>
-                  <h3 className="mt-2 text-[clamp(1.2rem,0.72cqw,0.84rem)] font-semibold leading-tight text-slate-950">{capability.title}</h3>
-                  <p className="mx-auto mt-1 max-w-[11rem] text-[clamp(0.9rem,0.56cqw,0.66rem)] font-medium leading-[1.28] text-slate-700">
+                  <h3 className="mt-2 text-[clamp(1.08rem,0.98cqw,1.22rem)] font-semibold leading-tight text-slate-950">{capability.title}</h3>
+                  <p className="mx-auto mt-1 max-w-[12.2rem] text-[clamp(0.82rem,0.78cqw,0.96rem)] font-medium leading-[1.28] text-slate-700">
                     {capability.body}
                   </p>
                 </motion.div>
@@ -276,8 +276,8 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
             >
               <Users aria-hidden="true" size={26} strokeWidth={1.9} />
             </motion.div>
-            <p className="text-[clamp(0.86rem,0.94cqw,1.08rem)] font-medium leading-[1.42] text-slate-950 md:text-[0.8cqw]">
-              When room, console, and software share context, operators focus less on coordination and more on the
+            <p className="text-[clamp(0.98rem,1cqw,1.16rem)] font-medium leading-[1.36] text-slate-950">
+              When the Comtrol room, workstations and technology work as one, operators can focus on what matters most - the
               <span className="text-red-600"> mission.</span>
             </p>
           </div>
@@ -285,8 +285,8 @@ function ConnectedIntelligenceReferenceSlide({ chapter }: Props) {
             <div className="flex min-h-0 items-center gap-3 border-l border-slate-200/80 px-3.5 py-3" key={item.title}>
               <item.icon aria-hidden="true" className={`shrink-0 ${item.color}`} size={28} strokeWidth={1.85} />
               <div className="min-w-0">
-                <h3 className="text-[clamp(1rem,0.66cqw,0.78rem)] font-semibold leading-tight text-slate-950">{item.title}</h3>
-                <p className="mt-1 text-[clamp(0.8rem,0.53cqw,0.62rem)] font-medium leading-[1.28] text-slate-700">{item.body}</p>
+                <h3 className="text-[clamp(0.95rem,0.86cqw,1.08rem)] font-semibold leading-tight text-slate-950">{item.title}</h3>
+                <p className="mt-1 text-[clamp(0.76rem,0.7cqw,0.9rem)] font-medium leading-[1.28] text-slate-700">{item.body}</p>
               </div>
             </div>
           ))}
@@ -784,5 +784,3 @@ function ConnectedRoomVisual({
     </motion.div>
   );
 }
-
-
