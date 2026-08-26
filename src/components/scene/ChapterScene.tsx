@@ -24,6 +24,7 @@ import { SystemDrivenExecutionChapter } from "./SystemDrivenExecutionChapter";
 import { UnifiedControlRoomChapter } from "./UnifiedControlRoomChapter";
 import { WhyOnePwsChapter } from "./WhyOnePwsChapter";
 import { ArchitecturalSystemsReferenceScene, architecturalSystemChapterIds } from "../../scenes/room-experience/ArchitecturalSystemsReferenceScene";
+import { OpeningVideoScene } from "../../scenes/opening/OpeningVideoScene";
 
 const sceneImageByChapterId: Record<string, string> = {
   "mission-critical-environments": "ambient-control-room",
@@ -81,6 +82,21 @@ export function ChapterScene({ chapter }: Props) {
 
   if (chapter.id === "products-transforming-spaces") {
     return <ProductsTransformingSpacesChapter chapter={chapter} />;
+  }
+
+  if (chapter.id === "opening-cover") {
+    const openingVideo = getAsset(chapter.media?.backgroundVideoAssetId);
+
+    if (openingVideo?.src) {
+      return (
+        <OpeningVideoScene
+          asset={openingVideo}
+          onComplete={() => dispatch({ type: "NEXT_CHAPTER" })}
+          onFallback={() => dispatch({ type: "NEXT_CHAPTER" })}
+          onSkip={() => dispatch({ type: "NEXT_CHAPTER" })}
+        />
+      );
+    }
   }
 
   if (chapter.id === "logo-finale") {
