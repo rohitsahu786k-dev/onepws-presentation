@@ -436,9 +436,9 @@ export function ArchitecturalSystemsReferenceScene({ chapter }: { chapter: Chapt
             </div>
 
             <p className="mt-[1.55cqh] max-w-[22rem] text-[clamp(1.08rem,1.28cqw,1.48rem)] font-medium leading-[1.34] text-slate-700">{page.subhead}</p>
-            <p className="mt-[1.85cqh] max-w-[22rem] text-[clamp(0.9rem,0.98cqw,1.14rem)] font-medium leading-[1.45] text-slate-700">{page.body}</p>
+            <p className="mt-[1.85cqh] max-w-[22rem] text-[clamp(0.8rem,0.8cqw,1.14rem)] font-medium leading-[1.45] text-slate-700">{page.body}</p>
 
-            <section className={`${isFireSafetyPage ? "mb-[6.1cqh] min-h-[31cqh]" : "mb-[6.1cqh]"} mt-auto overflow-hidden rounded-[0.78rem] border border-white/80 bg-white/60 p-[1.2cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.4rem_rgb(15_23_42/0.09)] backdrop-blur-[24px]`}>
+            <section className={`${isFireSafetyPage ? "mb-[6.1cqh] min-h-[29.5cqh]" : "mb-[6.1cqh] min-h-[29.5cqh]"} mt-auto overflow-hidden rounded-[0.78rem] border border-white/80 bg-white/60 p-[1.2cqw] shadow-[inset_0_1px_0_rgb(255_255_255/0.96),0_1rem_2.4rem_rgb(15_23_42/0.09)] backdrop-blur-[24px]`}>
               <h2 className="text-[clamp(0.82rem,0.94cqw,1.08rem)] font-semibold uppercase tracking-[0.08em] text-control-text">Key Highlights</h2>
               <div className="mt-[1.4cqh] grid grid-cols-3 gap-y-[1.5cqh]">
                 {page.keyHighlights.map((item, index) => <MiniFeatureCell accent={page.accent} index={index} item={item} key={item.title} />)}
@@ -532,8 +532,8 @@ function MiniFeatureCell({ item, index, accent }: { item: FeatureCell; index: nu
   return (
     <div className={`min-w-0 px-[0.8cqw] text-center ${index % 3 ? "border-l border-slate-200/90" : ""} ${index > 2 ? "border-t border-slate-200/90 pt-[1.3cqh]" : ""}`}>
       <Icon aria-hidden="true" className="mx-auto" color={accent} size={37} strokeWidth={1.65} />
-      <h3 className="mt-[0.75cqh] text-[clamp(0.74rem,0.86cqw,0.98rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
-      {item.description ? <p className="mt-0.5 text-[clamp(0.63rem,0.72cqw,0.84rem)] font-medium leading-[1.18] text-slate-700">{item.description}</p> : null}
+      <h3 className="mt-[0.75cqh] text-[clamp(0.74rem,0.7cqw,0.98rem)] font-semibold leading-tight text-control-text">{item.title}</h3>
+      
     </div>
   );
 }

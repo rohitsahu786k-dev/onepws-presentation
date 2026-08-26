@@ -53,7 +53,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
       <div className="pointer-events-none absolute inset-x-0 top-[8.55cqh] h-px bg-slate-200/90" />
       <div className="pointer-events-none absolute left-[2.1cqw] top-[36cqh] h-[30cqh] w-[42cqw] opacity-[0.045] [background-image:linear-gradient(90deg,#64748b_1px,transparent_1px),linear-gradient(#64748b_1px,transparent_1px)] [background-size:30px_30px]" />
 
-      <main className="relative z-10 grid h-full grid-cols-[minmax(0,0.91fr)_minmax(0,1.09fr)] grid-rows-[30.3cqh_35.7cqh_9.6cqh] gap-x-[1.55cqw] gap-y-[2.5cqh] px-[2.1cqw] pb-[4.9cqh] pt-[10.35cqh]">
+      <main className="relative z-10 grid h-full grid-cols-[minmax(0,1fr)_minmax(0,1fr)] grid-rows-[38.5cqh_24cqh_9.6cqh] gap-x-[1.55cqw] gap-y-[2cqh] px-[2.1cqw] pb-[4.9cqh] pt-[10.35cqh]">
         <motion.header animate={{ opacity: 1, y: 0 }} className="min-w-0 pt-[0.4cqh]" initial={false} transition={{ duration: 0.55 }}>
           <h1 className="text-[3.15cqw] font-bold uppercase leading-[0.96] tracking-normal text-black">
             <span className="block">Why</span>
@@ -66,9 +66,7 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
           </p>
         </motion.header>
 
-        <motion.section animate={{ opacity: 1, y: 0 }} className="grid min-h-0 grid-cols-3 grid-rows-2 gap-[0.75cqw]" initial={false} transition={{ duration: 0.55, delay: 0.05 }}>
-          {metrics.map((metric) => <MetricCard key={metric.label} metric={metric} />)}
-        </motion.section>
+       
 
         <motion.section animate={{ opacity: 1 }} className="relative min-h-0 overflow-hidden rounded-[0.55rem] border border-slate-200 bg-white shadow-[0_0.9rem_2.5rem_rgb(15_23_42/0.08)]" initial={false} transition={{ duration: 0.6, delay: 0.08 }}>
           <img alt="OnePWS control room" className="absolute inset-0 h-full w-full object-cover object-center" draggable={false} src="/assets/generated/final/futuristic-blue-command-center.png" />
@@ -79,10 +77,10 @@ export function WhyOnePwsChapter({ chapter }: { chapter: Chapter }) {
           </div>
         </motion.section>
 
-        <motion.section animate={{ opacity: 1 }} className="flex min-h-0 flex-col rounded-[0.55rem] border border-slate-200 bg-white px-[1.4cqw] py-[1.45cqh] shadow-[0_0.8rem_2.2rem_rgb(15_23_42/0.055)]" initial={false} transition={{ duration: 0.6, delay: 0.1 }}>
+        <motion.section animate={{ opacity: 1 }} className="col-span-2 flex min-h-0 flex-col rounded-[0.55rem] border border-slate-200 bg-white px-[1.4cqw] py-[1.05cqh] shadow-[0_0.8rem_2.2rem_rgb(15_23_42/0.055)]" initial={false} transition={{ duration: 0.6, delay: 0.1 }}>
           <h2 className="text-[1.12cqw] font-semibold uppercase">What Makes the Decision Safer</h2>
-          <div className="mt-[0.75cqh] h-[3px] w-[2.7rem] bg-control-warm" />
-          <div className="mt-[1.45cqh] grid min-h-0 flex-1 grid-cols-5 divide-x divide-slate-200">
+          <div className="mt-[0.55cqh] h-[3px] w-[2.7rem] bg-control-warm" />
+          <div className="mt-[0.95cqh] grid min-h-0 flex-1 grid-cols-5 divide-x divide-slate-200">
             {pillars.map((pillar) => <PillarCard key={pillar.title} pillar={pillar} />)}
           </div>
         </motion.section>
@@ -125,10 +123,10 @@ function MetricCard({ metric }: { metric: Metric }) {
 function PillarCard({ pillar }: { pillar: Pillar }) {
   return (
     <article className="flex min-w-0 flex-col items-center px-[1cqw] text-center">
-      <pillar.Icon className={pillar.color} size={31} strokeWidth={1.65} />
-      <h3 className="mt-[1.45cqh] min-h-[2.5em] text-[0.76cqw] font-bold uppercase leading-[1.25]">{pillar.title}</h3>
-      <p className="mt-[0.75cqh] text-[0.62cqw] font-medium leading-[1.35] text-slate-800">{pillar.detail}</p>
-      <p className="mt-auto pt-[0.35cqh] text-[0.56cqw] font-semibold uppercase leading-[1.2] text-control-warm">{pillar.proof}</p>
+      <pillar.Icon className={pillar.color} size={28} strokeWidth={1.65} />
+      <h3 className="mt-[0.85cqh] min-h-[2.45em] text-[0.72cqw] font-bold uppercase leading-[1.22]">{pillar.title}</h3>
+      <p className="mt-[0.45cqh] text-[0.58cqw] font-medium leading-[1.28] text-slate-800">{pillar.detail}</p>
+      <p className="mt-auto pt-[0.25cqh] text-[0.52cqw] font-semibold uppercase leading-[1.15] text-control-warm">{pillar.proof}</p>
     </article>
   );
 }

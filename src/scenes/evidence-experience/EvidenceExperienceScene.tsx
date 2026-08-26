@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { ClientLogoRibbon } from "../../components/brand/ClientLogoRibbon";
 import {
   Award,
   BadgeCheck,
@@ -23,6 +22,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { assets } from "../../content/assets";
+import { clientLogos } from "../../content/clientLogos";
 import { credentialProofPoints, customerLogoReferences } from "../../content/credentials";
 import { getVoiceover } from "../../content/voiceovers";
 import type { Chapter } from "../../data/contentTypes";
@@ -542,23 +542,13 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             initial={false}
             transition={{ duration: 0.72, delay: 0.08, ease }}
           >
-            <div className="min-w-0 rounded-[0.65rem]    py-[1.3cqh] ">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-[clamp(1rem,1.12cqw,1.32rem)] font-semibold uppercase leading-tight text-control-text">
-                    Customer References by Sector
-                  </h2>
-                  <div className="mt-[0.7cqh] h-[2px] w-[2.6rem] bg-control-warm" />
-                </div>
+            <div className="min-w-0 rounded-[0.65rem] py-[1.3cqh]">
+              <div className="flex items-center justify-end">
                 <p className="rounded-full border border-slate-200 bg-white/82 px-3 py-1 text-[clamp(0.58rem,0.64cqw,0.74rem)] font-semibold uppercase tracking-[0.16em] text-slate-600">
                   {referencedCount} sourced names
                 </p>
               </div>
-              <div className="mt-[1.2cqh] grid grid-cols-3 gap-[0.8cqw]">
-                {customerSectorGroups.map((group) => (
-                  <CustomerSectorCard group={group} key={group.title} />
-                ))}
-              </div>
+              <ClientLogoGridScroll />
             </div>
 
             <div className="grid min-h-0 grid-rows-[1fr_auto] gap-[1.1cqh]">
@@ -589,35 +579,8 @@ function CustomerPresenceScene({ chapter }: { chapter: Chapter }) {
             </div>
           </motion.section>
 
-          <motion.section
-            animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-4 overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/90 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]"
-            initial={false}
-            transition={{ duration: 0.72, delay: 0.14, ease }}
-          >
-            {customerPresenceProof.map((item, index) => (
-              <div className={`grid grid-cols-[3.35rem_minmax(0,1fr)] items-center gap-[0.9cqw] px-[1.05cqw] py-[1.1cqh] ${index ? "border-l border-slate-200/90" : ""}`} key={item.title}>
-                <span className="grid size-12 place-items-center rounded-full bg-control-warm/7 text-control-warm">
-                  <item.Icon aria-hidden="true" size={30} strokeWidth={1.6} />
-                </span>
-                <span>
-                  <strong className="block text-[clamp(1.2rem,0.8cqw,0.92rem)] font-semibold leading-tight text-control-text">{item.title}</strong>
-                  <span className="mt-[0.32cqh] block text-[clamp(0.88rem,0.66cqw,0.76rem)] font-medium leading-[1.24] text-slate-700">{item.detail}</span>
-                </span>
-              </div>
-            ))}
-          </motion.section>
-        </div>
-
-        <motion.section
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-0 bottom-[0.4cqh] h-[9cqh] p-4 bg-white shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)] rounded-xl"
-          initial={false}
-          transition={{ duration: 0.72, delay: 0.2, ease }}
-        >
           
-          <ClientLogoRibbon className="mt-[0.7cqh] h-[4.6cqh]" logoHeightClass="h-[3.9cqh]" />
-        </motion.section>
+        </div>
 
         <motion.div animate={{ opacity: 1, y: 0 }} className="pws-scene-control-dock absolute bottom-[0.1cqh] left-[0.1cqw] z-40 justify-start" initial={false} transition={{ duration: 0.62, delay: 0.42, ease }}>
           <button aria-label="Previous scene" className="pws-scene-control" onClick={() => dispatch({ type: "PREVIOUS_CHAPTER" })} title="Previous" type="button"><ChevronLeft aria-hidden="true" size={22} /></button>
@@ -657,6 +620,30 @@ function CustomerPresenceMetric({ item, index }: { item: { value: string; label:
       <strong className="mt-[0.65cqh] block text-[clamp(1.5rem,1.86cqw,2.15rem)] font-semibold leading-none text-control-warm">{item.value}</strong>
       <span className="mt-[0.65cqh] block text-[clamp(0.72rem,0.82cqw,0.96rem)] font-semibold leading-tight text-control-text">{item.label}</span>
     </article>
+  );
+}
+
+function ClientLogoGridScroll() {
+  const logoColumns = Array.from({ length: 8 }, (_, columnIndex) => clientLogos.filter((_, logoIndex) => logoIndex % 8 === columnIndex));
+
+  return (
+    <div className="relative mt-[1.2cqh] h-[52.0cqh] overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/74 shadow-[0_0.9rem_2.2rem_rgb(15_23_42/0.065)]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[4.2cqh] bg-gradient-to-b from-white via-white/84 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[4.2cqh] bg-gradient-to-t from-white via-white/84 to-transparent" />
+      <div className="grid h-full grid-cols-8 gap-[0.68cqw] p-[0.72cqw]">
+        {logoColumns.map((logos, columnIndex) => (
+          <div className="pws-client-logo-column min-h-0 overflow-hidden" key={`logo-column-${columnIndex}`}>
+            <div className="grid gap-[1.1cqh]">
+              {logos.map((logo, index) => (
+                <div className="grid h-[8.6cqh] min-w-0 place-items-center rounded-[0.48rem] px-[0.42cqw]" key={`${logo}-${index}`}>
+                  <img alt="" className="max-h-[6.7cqh] max-w-full object-contain" draggable={false} src={logo} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -883,5 +870,3 @@ function eventForCategory(category: EvidenceCategory): EvidenceEvent {
       return "capability_viewed";
   }
 }
-
-

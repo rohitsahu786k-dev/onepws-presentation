@@ -326,30 +326,20 @@ function ProjectCredentialSlide({ chapter }: Props) {
         </motion.div>
       </section>
 
-      <section className="grid min-w-0 flex-1 grid-rows-[auto_minmax(0,1fr)_auto] gap-4">
+      <section className="grid min-w-0 flex-1 grid-rows-[auto_minmax(0,1fr)_auto] ">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="grid grid-cols-3 overflow-hidden rounded-[1.35rem] border border-slate-200/70 bg-white/70 shadow-[0_1px_4px_rgba(15,23,42,0.05),0_14px_34px_rgba(15,23,42,0.08)] backdrop-blur-2xl"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.06 }}
         >
-          {credentialMetrics.map((metric) => (
-            <div className="flex items-center justify-center gap-4 border-r border-slate-200/80 px-7 py-4 last:border-r-0" key={metric.label}>
-              <div className="grid size-16 place-items-center rounded-full bg-red-50 text-red-600 ring-1 ring-red-100">
-                <metric.icon aria-hidden="true" size={30} strokeWidth={1.8} />
-              </div>
-              <div>
-                <p className="text-3xl font-semibold leading-none text-red-600">{metric.value}</p>
-                <p className="mt-1 max-w-[12rem] text-sm font-medium leading-5 text-slate-800">{metric.label}</p>
-              </div>
-            </div>
-          ))}
+         
           
         </motion.div>
 
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
-          className="relative min-h-0 overflow-hidden rounded-[1.55rem] border border-slate-200/70 bg-white/80 shadow-[0_2px_6px_rgba(15,23,42,0.06),0_18px_40px_rgba(15,23,42,0.10),0_44px_90px_rgba(15,23,42,0.10)] backdrop-blur-2xl"
+          className="relative min-h-0 overflow-hidden rounded-[1.55rem] border border-slate-200/70 bg-white/80 shadow-[0_2px_6px_rgba(15,23,42,0.06),0_18px_40px_rgba(15,23,42,0.10),0_44px_90px_rgba(15,23,42,0.10)] backdrop-blur-2xl mb-4"
           initial={false}
           transition={{ duration: motionDuration, delay: 0.12 }}
         >

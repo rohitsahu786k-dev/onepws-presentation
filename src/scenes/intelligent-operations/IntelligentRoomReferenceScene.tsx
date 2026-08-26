@@ -1887,9 +1887,9 @@ function SoftwareDefinedControlRoomScene({ chapter }: { chapter: Chapter }) {
             </div>
           </motion.div>
 
-          <section className={`col-span-2 row-start-2 grid min-h-0 grid-rows-[auto_minmax(0,1fr)] px-[0.85cqw] py-[1.1cqh] ${CARD}`}>
-              <h2 className="text-[0.9cqw] font-semibold uppercase leading-tight tracking-[0.02em] text-control-text">Software Powering Everything</h2>
-              <div className="mt-[0.7cqh] grid min-h-0 grid-cols-7 items-center">
+          <section className={`col-span-2 row-start-2 grid min-h-0 grid-rows-[auto_minmax(0,1fr)] px-[1.55cqw] py-[3.1cqh] ${CARD}`}>
+              <h2 className="text-[0.9cqw] font-semibold uppercase leading-tight tracking-[0.02em] text-control-text mb-3">Software Powering Everything</h2>
+              <div className="mt-[0.7cqh] grid min-h-0 grid-cols-7 items-start ">
                 {softwarePlatformFlow.map((item, index) => (
                   <SoftwarePlatformNodeV2 index={index} item={item} key={item.title} />
                 ))}
@@ -2500,14 +2500,14 @@ function SoftwareDefineStep({ item, index }: { item: TintedItem; index: number }
 function SoftwareDefineStepV2({ item, index }: { item: TintedItem; index: number }) {
   const Icon = item.Icon;
   return (
-    <div className="relative grid min-w-0 grid-cols-[2.95cqw_minmax(0,1fr)] items-center gap-[0.58cqw] px-[0.75cqw]">
-      {index ? <RunningDottedConnector className="left-[-1.4cqw] top-1/2 w-[1.38cqw]" /> : null}
+    <div className="relative grid min-w-0 grid-cols-[2.5cqw_minmax(0,1fr)] items-center gap-[0.48cqw] px-0">
+      {index ? <RunningDottedConnector className="left-[-3.05cqw] top-1/2 w-[2.05cqw]" /> : null}
       <span className={`grid size-[2.5cqw] place-items-center rounded-[0.5rem] ${item.tint}`}>
         <Icon aria-hidden="true" className={`h-[1.48cqw] w-[1.48cqw] ${item.color}`} strokeWidth={1.55} />
       </span>
       <span className="min-w-0">
         <strong className={`block text-[0.68cqw] font-semibold uppercase leading-tight tracking-[0.02em] ${item.color}`}>{item.title}</strong>
-        <span className="mt-[0.3cqh] block text-[0.6cqw] font-medium leading-[1.24] text-control-text">{item.description}</span>
+        {/* <span className="mt-[0.3cqh] block text-[0.6cqw] font-medium leading-[1.24] text-control-text">{item.description}</span> */}
       </span>
     </div>
   );
@@ -2552,9 +2552,9 @@ function SoftwarePlatformNodeV2({ item, index }: { item: SimpleItem & { color: s
 
   if (isPlatform) {
     return (
-      <div className="relative grid min-w-0 place-items-center px-[0.3cqw] text-center">
-        <RunningDottedConnector className="left-[-0.85cqw] top-[1.36cqw] w-[1.58cqw]" />
-        <RunningDottedConnector className="right-[-0.85cqw] top-[1.36cqw] w-[1.58cqw]" />
+      <div className="relative grid min-w-0 place-items-center px-[0.16cqw] text-center">
+        <RunningDottedConnector className="left-[-1.1cqw] top-[2.355cqw] w-[2.2cqw]" />
+        <RunningDottedConnector className="right-[-1.1cqw] top-[2.355cqw] w-[2.2cqw]" />
         <span className="flex h-[5.05cqw] w-[5.05cqw] flex-col items-center justify-center rounded-full border border-blue-200 bg-white px-[0.45cqw] shadow-[0_0_0_0.34cqw_rgb(37_99_235/0.07),0_0.55rem_1.35rem_rgb(37_99_235/0.10)]">
           <span className="grid place-items-center">
             <Icon aria-hidden="true" className="h-[1.32cqw] w-[1.32cqw] text-blue-600" strokeWidth={1.65} />
@@ -2568,13 +2568,13 @@ function SoftwarePlatformNodeV2({ item, index }: { item: SimpleItem & { color: s
   }
 
   return (
-    <div className="relative min-w-0 px-[0.42cqw] text-center">
-      {index && softwarePlatformFlow[index - 1]?.title !== "OnePWS Platform" ? <RunningDottedConnector className="left-[-0.9cqw] top-[1.36cqw] w-[1.75cqw]" /> : null}
+    <div className="relative min-w-0 px-[0.22cqw] text-center">
+      {index && softwarePlatformFlow[index - 1]?.title !== "OnePWS Platform" ? <RunningDottedConnector className="left-[-1.1cqw] top-[2.35cqw] w-[2.2cqw]" /> : null}
       <span className={`mx-auto grid h-[2.71cqw] w-[2.71cqw] place-items-center rounded-full border border-current/25 bg-white/70 ${item.color}`}>
         <Icon aria-hidden="true" className="h-[1.5cqw] w-[1.5cqw]" strokeWidth={1.45} />
       </span>
       <h3 className="mt-[0.7cqh] text-[0.72cqw] font-semibold uppercase leading-tight tracking-[0.02em] text-control-text">{item.title}</h3>
-      {item.description ? <p className="mx-auto mt-[0.3cqh] max-w-[7.5cqw] text-[0.66cqw] font-medium leading-[1.18] text-slate-700">{item.description}</p> : null}
+      {/* {item.description ? <p className="mx-auto mt-[0.3cqh] max-w-[7.5cqw] text-[0.66cqw] font-medium leading-[1.18] text-slate-700">{item.description}</p> : null} */}
     </div>
   );
 }
@@ -2582,12 +2582,8 @@ function SoftwarePlatformNodeV2({ item, index }: { item: SimpleItem & { color: s
 function RunningDottedConnector({ className }: { className: string }) {
   return (
     <span className={`pointer-events-none absolute block h-[0.72rem] -translate-y-1/2 overflow-hidden ${className}`}>
-      <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-[repeating-linear-gradient(90deg,rgb(100_116_139/0.72)_0_2px,transparent_2px_6px)]" />
-      <motion.span
-        animate={{ x: ["-35%", "135%"], opacity: [0, 1, 1, 0] }}
-        className="absolute top-1/2 h-[0.22rem] w-[0.72rem] -translate-y-1/2 rounded-full bg-[linear-gradient(90deg,transparent,#d51d2a,transparent)] shadow-[0_0_0.65rem_rgb(213_29_42/0.55)]"
-        transition={{ duration: 1.55, ease: "linear", repeat: Infinity }}
-      />
+      <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-[repeating-linear-gradient(90deg,rgb(37_99_235/0.78)_0_2px,transparent_2px_5px)]" />
+      <span className="absolute right-[0.02rem] top-1/2 h-[0.36rem] w-[0.36rem] -translate-y-1/2 rotate-45 border-r-2 border-t-2 border-blue-600/80" />
     </span>
   );
 }
@@ -2791,5 +2787,3 @@ function OutcomeCell({ item, index }: { item: SimpleItem; index: number }) {
     </div>
   );
 }
-
-

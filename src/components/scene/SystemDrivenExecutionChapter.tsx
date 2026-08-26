@@ -140,7 +140,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
         transition={{ duration: 2.6, delay: 0.35, ease: processEase }}
       />
 
-      <section className="absolute scene-content-safe z-20 grid content-center gap-[clamp(0.8rem,1.15cqh,1.1rem)]">
+      <section className="absolute scene-content-safe z-20 grid content-center gap-[clamp(2.8rem,1.15cqh,1.1rem)]">
         <div className="grid items-start gap-[min(2.5cqw,2.4rem)] lg:grid-cols-[minmax(0,0.52fr)_minmax(40rem,1fr)]">
           <div className="min-w-0">
             <motion.p
@@ -171,19 +171,19 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
 
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="relative mt-[clamp(3.1rem,4.25cqh,3.95rem)] flex min-h-[clamp(10.4rem,18cqh,12.8rem)] self-start overflow-hidden rounded-[0.65rem] border border-slate-200/90 bg-white/76 px-5 py-5 shadow-[0_1rem_2.4rem_rgb(15_23_42/0.06)] backdrop-blur-xl"
+            className="relative mt-[clamp(3.1rem,4.25cqh,3.95rem)] flex min-h-[clamp(10.4rem,18cqh,12.8rem)] self-start overflow-hidden rounded-[0.65rem] border border-slate-200/90 bg-[linear-gradient(135deg,rgb(255_255_255/0.88)_0%,rgb(248_250_252/0.74)_58%,rgb(255_255_255/0.9)_100%)] px-5 py-5 shadow-[0_1rem_2.8rem_rgb(15_23_42/0.07),inset_0_1px_0_rgb(255_255_255/0.96)] backdrop-blur-xl"
             initial={state.reducedMotion ? false : { opacity: 0, y: 22 }}
             transition={{ duration: motionDuration + 0.08, delay: 0.18, ease: processEase }}
           >
             <motion.div
               animate={state.reducedMotion ? undefined : { opacity: [0, 0.9, 0], x: ["-120%", "580%"] }}
-              className="pointer-events-none absolute inset-y-0 left-0 w-[18%] bg-[linear-gradient(90deg,transparent_0%,rgb(207_31_43/0.08)_48%,rgb(255_255_255/0.42)_52%,transparent_100%)]"
+              className=""
               initial={state.reducedMotion ? false : { opacity: 0, x: "-120%" }}
               transition={{ duration: 2.15, delay: 0.52, ease: processEase }}
             />
             <motion.div
               animate={{ opacity: 1, scaleX: 1 }}
-              className="pointer-events-none absolute left-[12%] right-[12%] top-[4.2rem] h-px origin-left bg-gradient-to-r from-transparent via-control-warm/25 to-transparent"
+              className=""
               initial={state.reducedMotion ? false : { opacity: 0, scaleX: 0 }}
               transition={{ duration: 1.35, delay: 0.58, ease: processEase }}
             />
@@ -231,7 +231,7 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
           {capabilities.map((capability, index) => (
             <motion.article
               animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, y: 0 }}
-              className="relative grid h-[clamp(11.2rem,21cqh,13rem)] grid-rows-[3.45rem_2.1rem_2rem_minmax(0,1fr)] items-start overflow-hidden rounded-[0.65rem] border border-slate-200/86 bg-white/82 px-4 pb-4 pt-5 text-center shadow-[0_0.7rem_1.8rem_rgb(15_23_42/0.045)] backdrop-blur-xl"
+              className="relative grid h-[clamp(11.2rem,21cqh,13rem)] grid-rows-[3.45rem_2.1rem_2rem_minmax(0,1fr)] items-start overflow-hidden rounded-[1rem] border border-slate-200/78  px-4 pb-4 pt-5 text-center shadow-[0_1.15rem_3rem_rgb(15_23_42/0.075),inset_0_1px_0_rgb(255_255_255/1)] backdrop-blur-2xl"
               initial={state.reducedMotion ? false : { clipPath: "inset(0% 0% 100% 0%)", opacity: 0, y: 10 }}
               key={capability.id}
               transition={{
@@ -244,13 +244,13 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
                   ? undefined
                   : {
                       y: -4,
-                      boxShadow: "0 1rem 2.2rem rgb(15 23 42 / 0.075)",
+                      boxShadow: "0 1.25rem 3.2rem rgb(15 23 42 / 0.09), inset 0 1px 0 rgb(255 255 255 / 0.9)",
                     }
               }
             >
               <motion.div
                 animate={state.reducedMotion ? undefined : { opacity: [0, 0.95, 0], y: ["-35%", "135%"] }}
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-[linear-gradient(180deg,transparent_0%,rgb(207_31_43/0.055)_48%,rgb(255_255_255/0.55)_52%,transparent_100%)]"
+                className="pointer-events-none absolute inset-x-0 top-0 h-full  blur-[0.06rem]"
                 initial={state.reducedMotion ? false : { opacity: 0, y: "-35%" }}
                 transition={{ duration: 1.15, delay: 0.72 + 0.08 * index, ease: processEase }}
               />
@@ -371,4 +371,3 @@ export function SystemDrivenExecutionChapter({ chapter }: Props) {
     </article>
   );
 }
-

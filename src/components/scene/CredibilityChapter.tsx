@@ -182,10 +182,10 @@ export function CredibilityChapter({ chapter }: Props) {
     <article className="relative h-full w-full overflow-hidden bg-white text-control-text">
       <div className="absolute inset-0 bg-[linear-gradient(118deg,#ffffff_0%,#fbfbfb_56%,#eef3f7_100%)]" />
       <div className="absolute right-0 top-0 h-[45%] w-[46%] bg-[radial-gradient(circle_at_80%_18%,rgb(207_31_43/0.055),transparent_48%)]" />
-      <div className="absolute bottom-0 left-[24%] h-[36%] w-[58%] bg-[radial-gradient(circle_at_48%_100%,rgb(209_218_229/0.36),transparent_60%)]" />
+      <div className="absolute bottom-0 left-[24%] h-[50%] w-[58%] bg-[radial-gradient(circle_at_48%_100%,rgb(209_218_229/0.36),transparent_60%)]" />
 
-      <section className="absolute scene-content-safe z-20 flex flex-col justify-start gap-[clamp(1rem,1.55cqh,1.45rem)] pt-[clamp(2rem,5.6cqh,4.2rem)]">
-        <div className="grid items-start gap-[min(3.2cqw,3.2rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1.12fr)]">
+      <section className="absolute scene-content-safe z-20 flex flex-col justify-start gap-[clamp(0.8rem,1.25cqh,1.2rem)] pt-[clamp(0.9rem,3.2cqh,2.5rem)]">
+        <div className="grid min-h-[43cqh] items-start gap-[min(3.2cqw,3.2rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(31rem,1.12fr)]">
           <div className="min-w-0 pt-[1.9cqh]">
           <motion.p
             animate={{ opacity: 1, y: 0 }}
@@ -360,7 +360,7 @@ function CredibilityMetricGrid({ points }: { points: CredentialProofPoint[] }) {
 
         return (
           <div
-            className="min-h-[4.9rem] border border-slate-200/82 bg-white/78 px-[clamp(0.9rem,1.05cqw,1.25rem)] py-[clamp(0.7rem,0.86cqh,0.95rem)] shadow-[0_0.8rem_2rem_rgb(15_23_42/0.045)]"
+            className="min-h-[8.9rem] border border-slate-200/82 bg-white/78 px-5 py-10 shadow-[0_0.8rem_2rem_rgb(15_23_42/0.045)]"
             key={point.id}
           >
             <p className="text-[clamp(1.5rem,1.82cqw,2.2rem)] font-bold leading-none text-control-text">
@@ -427,7 +427,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
   const areaPath = `${trendPath} L ${chartPoints[chartPoints.length - 1].centerX},${baseline} L ${chartPoints[0].centerX},${baseline} Z`;
 
   return (
-    <section className="relative overflow-hidden border border-slate-200/80 bg-white/82 p-[clamp(1rem,1.25cqw,1.45rem)] shadow-[0_1.25rem_3.2rem_rgb(15_23_42/0.075)]">
+    <section className="relative min-h-[39cqh] overflow-hidden border border-slate-200/80 bg-white/82 p-[clamp(1rem,1.25cqw,1.45rem)] shadow-[0_1.25rem_3.2rem_rgb(15_23_42/0.075)]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_8%,rgb(207_31_43/0.045),transparent_32%),linear-gradient(135deg,rgb(255_255_255/0.94),rgb(244_247_250/0.54))]" />
       <div className="relative">
         <div className="flex items-baseline justify-between gap-6">
@@ -443,7 +443,7 @@ function TurnoverChart({ reducedMotion }: { reducedMotion: boolean }) {
 
       <svg
         aria-label="OnePWS turnover growth chart in INR crores"
-        className="relative mt-[0.8cqh] h-[14.2rem] w-full overflow-visible"
+        className="relative mt-[1.1cqh] h-[35cqh] w-full overflow-visible"
         preserveAspectRatio="none"
         role="img"
         viewBox={`0 0 ${chartWidth} ${chartHeight}`}
@@ -878,4 +878,3 @@ function CredibilityBackdrop() {
     </div>
   );
 }
-

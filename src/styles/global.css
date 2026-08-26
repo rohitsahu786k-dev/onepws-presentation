@@ -4100,8 +4100,59 @@ button:focus-visible {
   to { transform: translate3d(-50%, 0, 0); }
 }
 
+.pws-client-logo-grid-track {
+  animation: pws-client-logo-grid-scroll-down 36s linear infinite;
+  will-change: transform;
+}
+
+.pws-client-logo-grid-track.is-reverse {
+  animation-name: pws-client-logo-grid-scroll-up;
+}
+
+.pws-client-logo-column:nth-child(2) .pws-client-logo-grid-track,
+.pws-client-logo-column:nth-child(6) .pws-client-logo-grid-track {
+  animation-duration: 39s;
+}
+
+.pws-client-logo-column:nth-child(3) .pws-client-logo-grid-track,
+.pws-client-logo-column:nth-child(7) .pws-client-logo-grid-track {
+  animation-duration: 42s;
+}
+
+.pws-client-logo-column:nth-child(4) .pws-client-logo-grid-track,
+.pws-client-logo-column:nth-child(8) .pws-client-logo-grid-track {
+  animation-duration: 38s;
+}
+
+.pws-client-logo-column:nth-child(3n) .pws-client-logo-grid-track {
+  animation-delay: -8s;
+}
+
+.pws-client-logo-column:nth-child(3n + 1) .pws-client-logo-grid-track {
+  animation-delay: -14s;
+}
+
+.pws-client-logo-grid-scroll:hover .pws-client-logo-grid-track {
+  animation-play-state: paused;
+}
+
+@keyframes pws-client-logo-grid-scroll-down {
+  from { transform: translate3d(0, -50%, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes pws-client-logo-grid-scroll-up {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -50%, 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pws-logo-ribbon-track {
     animation: none;
+  }
+
+  .pws-client-logo-grid-track {
+    animation: none;
+    transform: translate3d(0, 0, 0);
   }
 }
