@@ -22,6 +22,7 @@ export function SceneRenderer({ chapter, presenterPreview = false }: Props) {
 
   if (
     chapter.id === "presentation-flow-selector" ||
+    chapter.id === "opening-cover" ||
     chapter.id === "complete-ecosystem" ||
     chapter.id === "products-transforming-spaces" ||
     chapter.id === "logo-finale" ||
