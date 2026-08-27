@@ -4352,7 +4352,13 @@ button:focus-visible {
   }
 
   [data-virtual-landscape="true"] .pws-products-differentiators,
-  [data-virtual-landscape="true"] .pws-scene-control-dock {
+  .presentation-stage .pws-scene-control-dock,
+  .presentation-stage .pws-scene-narration-dock,
+  .presentation-stage .pws-fixed-scene-controller,
+  [data-virtual-landscape="true"] .pws-scene-control-dock,
+  [data-virtual-landscape="true"] .pws-scene-narration-dock,
+  [data-virtual-landscape="true"] .pws-fixed-scene-controller {
     display: none !important;
+    pointer-events: none !important;
   }
 }
