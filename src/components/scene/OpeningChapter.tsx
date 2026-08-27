@@ -17,6 +17,7 @@ export function OpeningChapter({ chapter }: Props) {
   const ambientRef = useRef<AudioContext | null>(null);
   const oscillatorRef = useRef<OscillatorNode | null>(null);
   const gainRef = useRef<GainNode | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const video = getAsset(chapter.media?.backgroundVideoAssetId);
   const fallback = getAsset(chapter.media?.fallbackImageAssetId);
   const x = useMotionValue(0);
@@ -32,6 +33,9 @@ export function OpeningChapter({ chapter }: Props) {
 
   useEffect(() => {
     if (!soundEnabled) {
+      if (videoRef.current) {
+        videoRef.current.muted = true;
+      }
       gainRef.current?.gain.setTargetAtTime(0, ambientRef.current?.currentTime ?? 0, 0.08);
       try {
         oscillatorRef.current?.stop();
@@ -60,6 +64,11 @@ export function OpeningChapter({ chapter }: Props) {
     gain.connect(context.destination);
     oscillator.start();
     gain.gain.setTargetAtTime(0.018, context.currentTime + 0.1, 0.9);
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.volume = 1;
+      videoRef.current.play().catch(() => undefined);
+    }
 
     ambientRef.current = context;
     oscillatorRef.current = oscillator;
@@ -95,11 +104,18 @@ export function OpeningChapter({ chapter }: Props) {
   }
 
   function toggleSound() {
+    dispatch({ type: "UNLOCK_AUDIO" });
     setSoundEnabled((current) => !current);
     if (!state.narrationEnabled) {
       dispatch({ type: "TOGGLE_NARRATION" });
     } else if (soundEnabled) {
       dispatch({ type: "TOGGLE_NARRATION" });
+    }
+    void ambientRef.current?.resume?.();
+    if (videoRef.current) {
+      videoRef.current.muted = soundEnabled;
+      videoRef.current.volume = soundEnabled ? 0 : 1;
+      videoRef.current.play().catch(() => undefined);
     }
   }
 
@@ -119,6 +135,7 @@ export function OpeningChapter({ chapter }: Props) {
             muted={!soundEnabled}
             playsInline
             poster={fallback?.src}
+            ref={videoRef}
             src={video.src}
           />
         ) : (
@@ -259,4 +276,3 @@ function ProgressiveRoomActivation({ reducedMotion }: { reducedMotion: boolean }
     </div>
   );
 }
-

@@ -10,6 +10,6 @@ const TRACK = "/assets/audio/en/background-music.mp3";
  * low enough that narration and the presenter sit in front of it.
  */
 export function BackgroundMusic() {
-  useSlideBackgroundMusic(TRACK, { volume: 0.1 });
+  useSlideBackgroundMusic(TRACK, { volume: 0.22 });
   return null;
 }

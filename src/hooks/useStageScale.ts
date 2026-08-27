@@ -8,10 +8,11 @@ import { useLayoutEffect, useRef, useState } from "react";
  */
 export const STAGE_WIDTH = 1920;
 export const STAGE_HEIGHT = 1080;
+const MOBILE_VIRTUAL_LANDSCAPE_MAX_WIDTH = 920;
 
 export function useStageScale<T extends HTMLElement>() {
   const frameRef = useRef<T | null>(null);
-  const [scale, setScale] = useState(1);
+  const [layout, setLayout] = useState({ scale: 1, virtualLandscape: false });
 
   useLayoutEffect(() => {
     const frame = frameRef.current;
@@ -30,8 +31,16 @@ export function useStageScale<T extends HTMLElement>() {
         return;
       }
 
-      const next = Math.min(width / STAGE_WIDTH, height / STAGE_HEIGHT);
-      setScale((current) => (Math.abs(current - next) < 0.0001 ? current : next));
+      const virtualLandscape = width < height && width <= MOBILE_VIRTUAL_LANDSCAPE_MAX_WIDTH;
+      const nextScale = virtualLandscape
+        ? Math.min(width / STAGE_HEIGHT, height / STAGE_WIDTH)
+        : Math.min(width / STAGE_WIDTH, height / STAGE_HEIGHT);
+
+      setLayout((current) =>
+        Math.abs(current.scale - nextScale) < 0.0001 && current.virtualLandscape === virtualLandscape
+          ? current
+          : { scale: nextScale, virtualLandscape },
+      );
     }
 
     measure();
@@ -53,5 +62,5 @@ export function useStageScale<T extends HTMLElement>() {
     };
   }, []);
 
-  return { frameRef, scale };
+  return { frameRef, scale: layout.scale, virtualLandscape: layout.virtualLandscape };
 }

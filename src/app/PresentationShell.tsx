@@ -7,6 +7,7 @@ import { ExperienceDebugOverlay } from "../components/dev/ExperienceDebugOverlay
 import { AudioManager } from "../components/media/AudioManager";
 import { BackgroundMusic } from "../components/media/BackgroundMusic";
 import { MainNavigation } from "../components/navigation/MainNavigation";
+import { MobileController } from "../components/navigation/MobileController";
 import { ProgressIndicator } from "../components/navigation/ProgressIndicator";
 import { ChapterMapOverlay } from "../components/overlays/ChapterMapOverlay";
 import { PresenterPanel } from "../components/presenter/PresenterPanel";
@@ -24,6 +25,7 @@ import { useDevelopmentOverlayToggle } from "../hooks/useDevelopmentOverlayToggl
 import { useFullscreen } from "../hooks/useFullscreen";
 import { useKeyboardControls } from "../hooks/useKeyboardControls";
 import { useMediaPreloader } from "../hooks/useMediaPreloader";
+import { useMobileLaunch } from "../hooks/useMobileLaunch";
 import { usePointerActivity } from "../hooks/usePointerActivity";
 import { roleFromUrl, usePresenterDisplaySync } from "../hooks/usePresenterDisplaySync";
 import { useReducedMotionMode } from "../hooks/useReducedMotionMode";
@@ -51,6 +53,7 @@ export function PresentationShell() {
   useAutoplayTimeline();
   useShowroomAutoPlayRecovery();
   useMediaPreloader();
+  useMobileLaunch();
   usePresenterDisplaySync(displayRole, state, dispatch);
 
   useEffect(() => {
@@ -206,7 +209,7 @@ export function PresentationShell() {
 
   return (
     <main
-      className="relative h-dvh w-dvw touch-none overflow-hidden bg-[#e9edf2] text-control-text"
+      className="relative h-dvh w-dvw touch-manipulation overflow-hidden bg-[#e9edf2] text-control-text"
       data-view={isCustomerDisplay ? "customer-display" : "standard"}
       onTouchEnd={handleTouchEnd}
       onTouchStart={handleTouchStart}
@@ -214,6 +217,7 @@ export function PresentationShell() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(207,31,43,0.10),transparent_34%),linear-gradient(180deg,#f7f8fa_0%,#e9edf2_100%)]" />
       <div className="absolute inset-0 control-grid opacity-35" />
       {customerStage}
+      <MobileController />
       <ChapterMapOverlay />
       <ContentValidationNotice />
       <OfflineStatusIndicator />

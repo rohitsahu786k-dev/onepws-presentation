@@ -28,18 +28,20 @@ export function MainNavigation() {
   const { dispatch, state } = usePresentation();
   const { toggleFullscreen } = useFullscreen();
   const [navigatorOpen, setNavigatorOpen] = useState(false);
+  const [mobileControlsVisible, setMobileControlsVisible] = useState(false);
   const model = useMemo(() => buildNavigationModel(state), [state]);
   const baseVisibility = model.currentDestination ? model.currentDestination.chapterId : state.chapterId;
   const navigationState =
-    navigatorOpen || state.navigationControlsRevealed || state.mode === "presenter" || state.activeOverlay
+    navigatorOpen || mobileControlsVisible || state.navigationControlsRevealed || state.mode === "presenter" || state.activeOverlay
       ? "visible"
       : model.currentDestination.chapterId === "opening-cover"
         ? "hidden-cinematic"
         : model.currentDestination.memoryMoment
           ? "minimal"
           : "visible";
-  const controlsVisible = navigatorOpen || state.navigationControlsRevealed || state.mode === "presenter" || Boolean(state.activeOverlay);
-  const triggerVisible = model.currentDestination.chapterId !== "opening-cover" || state.navigationControlsRevealed;
+  const controlsVisible = navigatorOpen || mobileControlsVisible || state.navigationControlsRevealed || state.mode === "presenter" || Boolean(state.activeOverlay);
+  const panelVisible = navigatorOpen || mobileControlsVisible;
+  const triggerVisible = !mobileControlsVisible && (model.currentDestination.chapterId !== "opening-cover" || state.navigationControlsRevealed);
   const branchOverlaySuppressedDestinations = new Set(["complete-ecosystem", "console-portfolio", "console-detail-edge", "console-detail-linear", "console-detail-vista", "console-detail-elevate", "console-detail-collab", "room-sounds-right", "room-built-to-protect", "room-engineered-to-last", "unified-control-room", "intelligent-features", "mechanical-strength-console", "incident-response", "ergonomic-methodology", "sightline-comfort", "design-build-approach", "architectural-systems", "manufacturing-quality", "certification-overview", "project-portfolio", "project-credentials-chandigarh-iccc", "project-credentials-adani-khavda", "project-credentials-rtgc-andhra", "project-credentials-acpo-ahmedabad", "project-credentials-itms-noida", "project-credentials-shell-brunei", "project-credentials-metro-rail-occ", "project-credentials-utility-command-centre", "project-credentials-industrial-operations-centre", "project-credentials-data-centre-noc", "project-credentials-emergency-response-centre", "project-credentials-airport-operations-centre", "project-credentials-manufacturing-control-centre", "customer-presence", "why-onepws", "next-steps-closing", "logo-finale", "room-recognizes-you", "console-understands-task", "information-comes-operator", "operational-state-room-responds", "room-protects-human-performance", "personal-workspace", "intelligence-beyond-desk", "digital-twin-control-room", "ai-silent-assistant", "software-defined-control-room"]);
   const showOptionalBranches = controlsVisible && !branchOverlaySuppressedDestinations.has(model.currentDestination.chapterId);
 
@@ -48,6 +50,15 @@ export function MainNavigation() {
       setNavigatorOpen(false);
     }
   }, [state.activeOverlay]);
+
+  useEffect(() => {
+    const query = window.matchMedia("(pointer: coarse), (max-width: 920px)");
+    const syncMobileControls = () => setMobileControlsVisible(query.matches);
+
+    syncMobileControls();
+    query.addEventListener("change", syncMobileControls);
+    return () => query.removeEventListener("change", syncMobileControls);
+  }, []);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -63,6 +74,16 @@ export function MainNavigation() {
   function openChapterMap() {
     setNavigatorOpen(false);
     dispatch({ type: "SET_OVERLAY", overlay: { type: "chapterMap" } });
+  }
+
+  function togglePlayback() {
+    dispatch({ type: "UNLOCK_AUDIO" });
+    dispatch({ type: "SET_PLAYING", isPlaying: !state.isPlaying });
+  }
+
+  function toggleNarration() {
+    dispatch({ type: "UNLOCK_AUDIO" });
+    dispatch({ type: "TOGGLE_NARRATION" });
   }
 
   return (
@@ -99,7 +120,7 @@ export function MainNavigation() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col items-center">
         <AnimatePresence>
-          {navigatorOpen ? (
+          {panelVisible ? (
             <motion.div
               animate={{ opacity: 1, y: 0 }}
               className="pointer-events-auto mb-3 w-full px-[var(--stage-safe-x)]"
@@ -150,7 +171,7 @@ export function MainNavigation() {
                   <button
                     aria-label={state.isPlaying ? "Pause route" : "Play route"}
                     className={`control-button ${state.mode === "autoPlay" && state.isPlaying ? "border-control-warm text-control-warm" : ""}`}
-                    onClick={() => dispatch({ type: "SET_PLAYING", isPlaying: !state.isPlaying })}
+                    onClick={togglePlayback}
                     title={state.isPlaying ? "Pause route" : "Play route"}
                     type="button"
                   >
@@ -169,7 +190,7 @@ export function MainNavigation() {
                   <button
                     aria-label={state.narrationEnabled ? "Narration enabled" : "Narration disabled"}
                     className="control-button"
-                    onClick={() => dispatch({ type: "TOGGLE_NARRATION" })}
+                    onClick={toggleNarration}
                     title={state.narrationEnabled ? "Disable narration" : "Enable narration"}
                     type="button"
                   >
@@ -184,7 +205,16 @@ export function MainNavigation() {
                   >
                     <Captions aria-hidden="true" size={17} />
                   </button>
-                  <button aria-label="Toggle fullscreen" className="control-button" onClick={() => void toggleFullscreen()} title="Fullscreen" type="button">
+                  <button
+                    aria-label="Toggle fullscreen"
+                    className="control-button"
+                    onClick={() => {
+                      dispatch({ type: "UNLOCK_AUDIO" });
+                      void toggleFullscreen();
+                    }}
+                    title="Fullscreen"
+                    type="button"
+                  >
                     <Expand aria-hidden="true" size={17} />
                   </button>
                   <ModeToggle />
@@ -313,4 +343,3 @@ function JourneyTrace({
     </div>
   );
 }
-

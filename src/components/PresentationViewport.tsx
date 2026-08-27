@@ -8,11 +8,12 @@ export function PresentationViewport({
   children: ReactNode;
   presenterPreview?: boolean;
 }) {
-  const { frameRef, scale } = useStageScale<HTMLDivElement>();
+  const { frameRef, scale, virtualLandscape } = useStageScale<HTMLDivElement>();
 
   return (
     <section
       className={`relative z-10 overflow-hidden ${presenterPreview ? "h-full w-full" : "h-dvh w-dvw"}`}
+      data-virtual-landscape={virtualLandscape ? "true" : undefined}
     >
       <div className="pws-stage-frame" ref={frameRef}>
         <div

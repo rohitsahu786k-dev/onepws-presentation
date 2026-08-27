@@ -44,6 +44,33 @@ export function OpeningVideoScene({ asset, onComplete, onFallback, onReplay, onS
     onReplay?.();
   }
 
+  function startWithSound() {
+    const video = videoRef.current;
+    setMuted(false);
+    if (!video) {
+      return;
+    }
+
+    video.muted = false;
+    video.volume = 1;
+    video.play().then(() => setHasStarted(true)).catch(onFallback);
+  }
+
+  function toggleSound() {
+    const video = videoRef.current;
+    const nextMuted = !muted;
+    setMuted(nextMuted);
+    if (!video) {
+      return;
+    }
+
+    video.muted = nextMuted;
+    video.volume = nextMuted ? 0 : 1;
+    if (!nextMuted) {
+      video.play().then(() => setHasStarted(true)).catch(onFallback);
+    }
+  }
+
   return (
     <section className="pws-opening-video-scene" aria-label="OnePWS opening video">
       <video
@@ -62,8 +89,8 @@ export function OpeningVideoScene({ asset, onComplete, onFallback, onReplay, onS
         <OnePwsLogo compact lightOnDark />
       </div>
       {!hasStarted ? (
-        <button className="pws-opening-video-start" onClick={() => videoRef.current?.play().catch(onFallback)} type="button">
-          Start opening
+        <button className="pws-opening-video-start" onClick={startWithSound} type="button">
+          Start with sound
         </button>
       ) : null}
       <div className="pws-opening-video-controls" aria-label="Opening video controls">
@@ -82,7 +109,7 @@ export function OpeningVideoScene({ asset, onComplete, onFallback, onReplay, onS
         <button
           aria-label={muted ? "Unmute opening video" : "Mute opening video"}
           className="pws-opening-video-button"
-          onClick={() => setMuted((value) => !value)}
+          onClick={toggleSound}
           title={muted ? "Unmute opening video" : "Mute opening video"}
           type="button"
         >
