@@ -10,6 +10,7 @@ export function MobileController() {
 
   function unlockAudio() {
     dispatch({ type: "UNLOCK_AUDIO" });
+    window.dispatchEvent(new Event("pws-audio-unlock"));
   }
 
   return (
@@ -53,6 +54,9 @@ export function MobileController() {
         className={state.narrationEnabled ? "is-active" : ""}
         onClick={() => {
           unlockAudio();
+          if (!state.narrationEnabled) {
+            dispatch({ type: "SET_PLAYING", isPlaying: true });
+          }
           dispatch({ type: "TOGGLE_NARRATION" });
         }}
         type="button"

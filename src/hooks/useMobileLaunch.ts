@@ -37,6 +37,7 @@ export function useMobileLaunch() {
   useEffect(() => {
     function launch() {
       dispatch({ type: "UNLOCK_AUDIO" });
+      window.dispatchEvent(new Event("pws-audio-unlock"));
 
       if (launchedRef.current) {
         return;

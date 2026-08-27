@@ -4122,6 +4122,10 @@ button:focus-visible {
     display: none;
   }
 
+  [data-virtual-landscape="true"] .pws-stage-frame {
+    bottom: calc(max(5.75rem, env(safe-area-inset-bottom) + 5.25rem));
+  }
+
   .pws-mobile-controller {
     position: fixed;
     left: max(0.75rem, env(safe-area-inset-left));

@@ -9,7 +9,7 @@ type Options = {
   fadeSeconds?: number;
 };
 
-const INTERACTIONS = ["pointerdown", "keydown", "touchstart"] as const;
+const INTERACTIONS = ["pointerdown", "pointerup", "click", "keydown", "touchstart", "pws-audio-unlock"] as const;
 
 /**
  * Loops a bed of music for as long as the slide is on screen.
@@ -58,11 +58,16 @@ export function useSlideBackgroundMusic(src: string | null, { volume = 0.1, enab
     };
 
     const startOnInteraction = () => {
-      INTERACTIONS.forEach((event) => window.removeEventListener(event, startOnInteraction));
       if (cancelled) {
         return;
       }
-      void audio.play().then(() => fadeTo(volume)).catch(() => undefined);
+      void audio
+        .play()
+        .then(() => {
+          INTERACTIONS.forEach((event) => window.removeEventListener(event, startOnInteraction));
+          fadeTo(volume);
+        })
+        .catch(() => undefined);
     };
 
     void audio
